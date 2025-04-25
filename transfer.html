@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Trip 69</title>
+      <!-- Tempus Dominus Bootstrap 4 Datepicker -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+      <!-- Slick Carousel CSS -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+      <!-- right sidebar -->
+      <link rel="stylesheet" href="dist/css/overlayScrollbars/css/OverlayScrollbars.min.css">
+      <link rel="stylesheet" href="dist/css/adminlte.min.css">
+      <link rel="stylesheet" href="dist/css/fontawesome-free/css/all.min.css">
+      <!-- custom style -->
+      <link rel="stylesheet" href="/dist/css/customStyle.css">
+   </head>
+   <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed tranfer-home">
+      <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-dark">
+         <!-- Left navbar links -->
+         <div class="w-100">
+            <ul class="navbar-nav ml-auto w-75 d-flex align-items-center">
+               <!-- <li class="nav-item">
+                  <a href="index3.html" class="brand-link">
+                    <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                    <span class="brand-text font-weight-light">Trip 69</span>
+                  </a>    
+                  </li> -->
+               <li class="nav-item d-none d-sm-inline-block">
+                  <div class="logo">
+                     <a href="#"><b>Trip</b>69</a>
+                  </div>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="/hotel.html" class="nav-link">Hotels</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block active">
+                  <a href="/transfer.html" class="nav-link">Transfer</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="/activity.html" class="nav-link">Activity</a>
+               </li>
+            </ul>
+         </div>
+         <!-- Right navbar links -->
+         <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <!-- Navbar Search -->
+            <li class="nav-item d-none d-sm-inline-block">
+               <a href="#" class="nav-link">₹50,000</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+               <a href="#" class="nav-link">Recharge</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+               <div class="user-panel d-flex mr-3">
+                  <div class="image">
+                     <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                  </div>
+                  <div class="info">
+                     <a href="#" class="d-block">Ram Sharma</a>
+                  </div>
+               </div>
+            </li>
+            <li class="nav-item d-none d-sm-flex align-items-center" title="logout">
+               <a href="/login.html" class="d-sm-flex align-items-center">
+                  <i class="fas fa-power-off"></i>
+                  <!-- Logout -->
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+               <i class="fas fa-expand-arrows-alt"></i>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+               <i class="fas fa-th-large"></i>
+               </a>
+            </li>
+         </ul>
+      </nav>
+      <!-- /.navbar -->
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+         <!-- Content Header (Page header) -->
+         <div class="content-header p-0">
+            <div class="container-fluid p-0">
+               <div class="position-relative transfer-home-header" style="min-height: 550px; border-radius: 0 0 10px 10px; overflow: hidden;">
+                  <!-- Background Image -->
+                  <div class="w-100 h-100 position-absolute top-0 start-0" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;"></div>
+                  <!-- Dark Overlay -->
+                  <div class="position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+                  <!-- Tabs -->
+                  <div class="card card-primary card-tabs position-absolute w-75" style="top: 50%; left: 50%; transform: translate(-50%,-50%);">
+                     <div class="card-header p-0">
+                        <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                           <li class="nav-item">
+                              <a class="nav-link" 
+                                 href="/hotel.html">Hotel</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link active" id="tab2-tab" data-toggle="pill" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Transfer</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" 
+                                 href="/activity.html"
+                                 >Activity</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="card-body">
+                        <div class="tab-content" id="custom-tabs-one-tabContent">
+                           <div class="tab-pane fade show active" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                              <form>
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                       <label>City,Area, Airport or Hotel</label>
+                                       <div class="d-flex rounded" style="border: 1px solid grey;">
+                                          <div class="nav-item  border-right">
+                                             <a class="nav-link text-muted"  href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-car"></i>
+                                             </a>                
+                                          </div>
+                                          <input type="text" class="form-control rounded-0 border-0" name="pickup" placeholder="City,Area, Airport or Hotel" required>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <label>City,Area, Airport or Hotel</label>
+                                       <div class="d-flex rounded" style="border: 1px solid grey;">
+                                          <div class="nav-item dropdown border-right">
+                                             <a class="nav-link  text-muted"  href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-pin"></i>
+                                             </a>                
+                                          </div>
+                                          <input type="text" class="form-control rounded-0 border-0" name="pickout" placeholder="City,Area, Airport or Hotel">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="row d-flex align-items-center mt-3">
+                                    <div class="col-md-4">
+                                       <div class="form-group">
+                                          <label>Pickup</label>
+                                          <div class="d-flex border rounded">
+                                             <span class="input-group-text rounded-0 input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker" required>
+                                             <i class="far fa-calendar-alt"></i>
+                                             </span>
+                                             <div class="input-group date border-0" id="reservationdatetime" data-target-input="nearest">
+                                                <input type="text" class="form-control datetimepicker-input border-0" data-target="#reservationdatetime">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                       <!-- Add inside any card-body or section in your page -->
+                                       <div class="form-group position-relative">
+                                          <label>Passengers</label>
+                                          <button class="btn w-100 p-2 text-muted fw-bold text-start d-flex align-items-center justify-content-between border" id="passengerBtn" type="button">
+                                             <div>
+                                                <i class="fas fa-user-friends mr-2"></i>
+                                                <span>
+                                                <strong>Passengers:</strong> <span id="total-passenger">1</span>,
+                                                <strong>Adults:</strong> <span id="adult-count">1</span>, 
+                                                <strong>Children:</strong> <span id="child-count">0</span> 
+                                                </span>
+                                             </div>
+                                             <i class="fas fa-chevron-down"></i>
+                                          </button>
+                                          <div class="card border-muted shadow dropdown-menu p-3 mt-1 w-100" id="passengerDropdown" style="display: none; position: absolute; z-index: 1050;">
+                                             <!-- Adults -->
+                                             <div class="form-group row align-items-center">
+                                                <label class="col-sm-3 col-form-label">Adults</label>
+                                                <div class="col-sm-9 input-group">
+                                                   <button type="button" class="btn btn-outline-secondary" onclick="updateCount('adults', -1)">
+                                                   <i class="fas fa-minus-circle"></i>
+                                                   </button>
+                                                   <input type="number" id="adults" class="form-control text-center mx-2" value="1" readonly>
+                                                   <button type="button" class="btn btn-outline-secondary" onclick="updateCount('adults', 1)">
+                                                   <i class="fas fa-plus-circle"></i>
+                                                   </button>
+                                                </div>
+                                             </div>
+                                             <!-- Children -->
+                                             <div class="form-group row align-items-center mt-3">
+                                                <label class="col-sm-3 col-form-label">Children</label>
+                                                <div class="col-sm-9 input-group">
+                                                   <button type="button" class="btn btn-outline-secondary" onclick="updateCount('children', -1)">
+                                                   <i class="fas fa-minus-circle"></i>
+                                                   </button>
+                                                   <input type="number" id="children" class="form-control text-center mx-2" value="0" readonly>
+                                                   <button type="button" class="btn btn-outline-secondary" onclick="updateCount('children', 1)">
+                                                   <i class="fas fa-plus-circle"></i>
+                                                   </button>
+                                                </div>
+                                             </div>
+                                             <!-- Child Age Inputs -->
+                                             <div id="child-age-inputs" class="mt-3"></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-md-2 mt-3 ">
+                                       <a href="/transfer-detail.html" type="submit" class="btn btn-primary btn-block">Search</a>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-12"><span><i class="fas fa-thumbs-up mr-1"></i>
+                                       </span><span class="font-weight-bold">Transport Types</span>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="transfer-img-box">
+                                          <img src="./dist/img/toyota-car.png" alt="White Toyota Car" width="200">                                    
+                                       </div>
+                                       <span class="font-weight-bold">Toyota Previa or Similar</span>
+                                       <span class="d-block">6 Passengers</span>
+                                    </div>
+                                 </div>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /.container-fluid -->
+         </div>
+         <!-- /.content-header -->
+         <!-- Main content -->
+         <section class="content mt-5">
+            <div class="container">
+               <!-- Section Heading -->
+               <h4 class="mb-3 font-weight-bold"> <span class="text-warning">||</span> Transfer Services</h4>
+               <!-- Services Row -->
+               <div class="row h-100">
+                  <!-- Service 1 -->
+                  <div class="col-12 col-md-4 mb-4">
+                     <div class="d-flex align-items-start info-box p-3 rounded shadow-sm">
+                        <div class="fs-1 text-warning" style="font-size: 2rem;">
+                           <i class="far fa-clock"></i>
+                        </div>
+                        <div class="fs-6 callout-info px-3">
+                           Arrive at your desired location in a safe and timely manner with no hidden charges.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Service 2 -->
+                  <div class="col-12 col-md-4 mb-4">
+                     <div class="d-flex align-items-start info-box p-3 rounded shadow-sm">
+                        <div class="fs-2 text-warning" style="font-size: 2rem;">
+                           <i class="far fa-calendar-alt"></i>
+                        </div>
+                        <div class="fs-6 callout-info px-3">
+                           Plan ahead and book your local land transport for a stress-free and relaxing transfer at the destination.
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Service 3 -->
+                  <div class="col-12 col-md-4 mb-4 h-100">
+                     <div class="d-flex  info-box p-3 rounded shadow-sm">
+                        <div class="fs-2 text-warning" style="font-size: 2rem;">
+                           <i class="fas fa-car-side"></i>
+                        </div>
+                        <div class="fs-6 callout-info px-3">
+                           We offer a range of vehicles from cars, limousines, mini-buses.
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="container">
+               <div class="container py-4 mb-5">
+                  <div class="car-transfer">
+                     <div class="row d-flex align-items-center info-box rounded shadow-sm p-3 mb-4" data-toggle="modal" data-target="#car-details-motel" style="cursor: pointer;">
+                        <!-- Image Section -->
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                           <div class="dettail-img-box">
+                              <img src="./dist/img/toyota-car.png" alt="img box" width="500">
+                           </div>
+                        </div>
+                        <!-- Info Section -->
+                        <div class="col-12 col-md-6 text-light">
+                           <div class="pb-2">
+                              <a href="#" class="fs-5 fw-bold text-warning text-decoration-none">
+                              Arrival From Dubai Airport to Dubai Zone 1
+                              </a>
+                           </div>
+                           <div class="fs-6 mb-1">
+                              <span class="fw-bold text-muted">Vehicle Type:</span>
+                              <span class="ps-2 text-secondary">Toyota Previa or Similar</span>
+                           </div>
+                           <div class="fs-6 mb-1">
+                              <span class="fw-bold text-muted">Model:</span>
+                              <span class="ps-2 text-secondary">Standard 7 Seater (Regular Model)</span>
+                           </div>
+                           <div class="fs-6">
+                              <span class="text-secondary">
+                              <i class="fas fa-user text-warning"></i>
+                              <span class="ps-2">6 Passenger</span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row d-flex align-items-center info-box rounded shadow-sm p-3 mb-4" data-toggle="modal" data-target="#car-details-motel-2" style="cursor: pointer;">
+                        <!-- Image Section -->
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                           <div class="dettail-img-box">
+                              <img src="./dist/img/toyota-car.png" alt="img box" width="500">
+                           </div>
+                        </div>
+                        <!-- Info Section -->
+                        <div class="col-12 col-md-6 text-light">
+                           <div class="pb-2">
+                              <a href="#" class="fs-5 fw-bold text-warning text-decoration-none">
+                              Arrival From Dubai Airport to Dubai Zone 1
+                              </a>
+                           </div>
+                           <div class="fs-6 mb-1">
+                              <span class="fw-bold text-muted">Vehicle Type:</span>
+                              <span class="ps-2 text-secondary">Toyota Previa or Similar</span>
+                           </div>
+                           <div class="fs-6 mb-1">
+                              <span class="fw-bold text-muted">Model:</span>
+                              <span class="ps-2 text-secondary">Standard 7 Seater (Regular Model)</span>
+                           </div>
+                           <div class="fs-6">
+                              <span class="text-secondary">
+                              <i class="fas fa-user text-warning"></i>
+                              <span class="ps-2">6 Passenger</span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row d-flex align-items-center info-box rounded shadow-sm p-3 mb-4" data-toggle="modal" data-target="#car-details-motel-2" style="cursor: pointer;">
+                        <!-- Image Section -->
+                        <div class="col-12 col-md-6 mb-3 mb-md-0">
+                           <div class="dettail-img-box">
+                              <img src="./dist/img/toyota-car.png" alt="img box" width="500">
+                           </div>
+                        </div>
+                        <!-- Info Section -->
+                        <div class="col-12 col-md-6 text-light">
+                           <div class="pb-2">
+                              <a href="#" class="fs-5 fw-bold text-warning text-decoration-none">
+                              Arrival From Dubai Airport to Dubai Zone 1
+                              </a>
+                           </div>
+                           <div class="fs-6 mb-1">
+                              <span class="fw-bold text-muted">Vehicle Type:</span>
+                              <span class="ps-2 text-secondary">Toyota Previa or Similar</span>
+                           </div>
+                           <div class="fs-6 mb-1">
+                              <span class="fw-bold text-muted">Model:</span>
+                              <span class="ps-2 text-secondary">Standard 7 Seater (Regular Model)</span>
+                           </div>
+                           <div class="fs-6">
+                              <span class="text-secondary">
+                              <i class="fas fa-user text-warning"></i>
+                              <span class="ps-2">6 Passenger</span>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- car model 1 -->
+            <div class="modal fade show" id="car-details-motel" style="display: none;" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content bg-dark">
+                     <!-- Modal Header -->
+                     <div class="modal-header border-secondary">
+                        <h5 class="modal-title text-light font-weight-bold">Transfer Service Detail</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <!-- Modal Body -->
+                     <div class="modal-body bg-secondary-dark">
+                        <div class="row">
+                           <!-- Vehicle Image -->
+                           <div class="col-12 col-md-4 mb-3">
+                              <div class="rounded overflow-hidden bg-dark" style="height: 200px; background-image: url('https://manage.tpb2b.com//ImageData/Craft/standard-51-seater-regular-model--dm23110003.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+                           </div>
+                           <!-- Transfer Details -->
+                           <div class="col-12 col-md-8 py-3">
+                              <div class="row">
+                                 <div class="pb-3 col-12 col-md-6 d-flex">
+                                    <div class="text-muted pe-3"><i class="fas fa-car-side"></i></div>
+                                    <div class="text-light font-weight-bold">Airport, Dubai International Airport</div>
+                                 </div>
+                                 <div class="pb-3 col-12 col-md-6 d-flex">
+                                    <div class="text-muted pe-3"><i class="fas fa-map-pin"></i></div>
+                                    <div class="text-light font-weight-bold">City, Dubai Zone 1</div>
+                                 </div>
+                              </div>
+                              <h4 class="py-3 font-weight-bold text-light">Arrival From Dubai Airport to Dubai Zone 1</h4>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Pick-up:</div>
+                                 <div class="text-muted">Airport, Dubai International Airport</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Drop Off:</div>
+                                 <div class="text-muted">City, Dubai Zone 1</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Approximate Time By Hour:</div>
+                                 <div class="text-muted"></div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Vehicle Type:</div>
+                                 <div class="text-muted">Standard 51 Seater (Regular Model).</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Model:</div>
+                                 <div class="text-muted">King Long or Similar</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Max Passenger:</div>
+                                 <div class="text-muted">45</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Luggage:</div>
+                                 <div class="text-muted">40 Check-In Bags + 40 Hand Bags</div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Description Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Description</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10">
+                              <span class="text-muted">Airport Arrival Transfer from Dubai Airport to Hotels located in Deira, Bur Dubai, Al Jaddaf, Sheikh Zayed Road, Downtown, Business bay</span>
+                           </div>
+                        </div>
+                        <!-- Meeting Point Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Meeting Point</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10">
+                              <span class="text-muted">Dubai Airport, Paging Area</span>
+                           </div>
+                        </div>
+                        <!-- Conditions Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Conditions</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10 text-muted">
+                              <!-- Conditions content would go here -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Modal Footer -->
+                     <div class="modal-footer border-secondary">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+              <!-- car model 2 -->
+              <div class="modal fade show" id="car-details-motel-2" style="display: none;" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content bg-dark">
+                     <!-- Modal Header -->
+                     <div class="modal-header border-secondary">
+                        <h5 class="modal-title text-light font-weight-bold">Transfer Service Detail</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <!-- Modal Body -->
+                     <div class="modal-body bg-secondary-dark">
+                        <div class="row">
+                           <!-- Vehicle Image -->
+                           <div class="col-12 col-md-4 mb-3">
+                              <div class="rounded overflow-hidden bg-dark" style="height: 200px; background-image: url('https://manage.tpb2b.com//ImageData/Craft/standard-51-seater-regular-model--dm23110003.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+                           </div>
+                           <!-- Transfer Details -->
+                           <div class="col-12 col-md-8 py-3">
+                              <div class="row">
+                                 <div class="pb-3 col-12 col-md-6 d-flex">
+                                    <div class="text-muted pe-3"><i class="fas fa-car-side"></i></div>
+                                    <div class="text-light font-weight-bold">Airport, Dubai International Airport</div>
+                                 </div>
+                                 <div class="pb-3 col-12 col-md-6 d-flex">
+                                    <div class="text-muted pe-3"><i class="fas fa-map-pin"></i></div>
+                                    <div class="text-light font-weight-bold">City, Dubai Zone 1</div>
+                                 </div>
+                              </div>
+                              <h4 class="py-3 font-weight-bold text-light">Arrival From Dubai Airport to Dubai Zone 1</h4>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Pick-up:</div>
+                                 <div class="text-muted">Airport, Dubai International Airport</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Drop Off:</div>
+                                 <div class="text-muted">City, Dubai Zone 1</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Approximate Time By Hour:</div>
+                                 <div class="text-muted"></div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Vehicle Type:</div>
+                                 <div class="text-muted">Standard 51 Seater (Regular Model).</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Model:</div>
+                                 <div class="text-muted">King Long or Similar</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Max Passenger:</div>
+                                 <div class="text-muted">45</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Luggage:</div>
+                                 <div class="text-muted">40 Check-In Bags + 40 Hand Bags</div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Description Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Description</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10">
+                              <span class="text-muted">Airport Arrival Transfer from Dubai Airport to Hotels located in Deira, Bur Dubai, Al Jaddaf, Sheikh Zayed Road, Downtown, Business bay</span>
+                           </div>
+                        </div>
+                        <!-- Meeting Point Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Meeting Point</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10">
+                              <span class="text-muted">Dubai Airport, Paging Area</span>
+                           </div>
+                        </div>
+                        <!-- Conditions Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Conditions</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10 text-muted">
+                              <!-- Conditions content would go here -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Modal Footer -->
+                     <div class="modal-footer border-secondary">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+              <!-- car model 3 -->
+              <div class="modal fade show" id="car-details-motel-3" style="display: none;" aria-hidden="true">
+               <div class="modal-dialog modal-lg">
+                  <div class="modal-content bg-dark">
+                     <!-- Modal Header -->
+                     <div class="modal-header border-secondary">
+                        <h5 class="modal-title text-light font-weight-bold">Transfer Service Detail</h5>
+                        <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <!-- Modal Body -->
+                     <div class="modal-body bg-secondary-dark">
+                        <div class="row">
+                           <!-- Vehicle Image -->
+                           <div class="col-12 col-md-4 mb-3">
+                              <div class="rounded overflow-hidden bg-dark" style="height: 200px; background-image: url('https://manage.tpb2b.com//ImageData/Craft/standard-51-seater-regular-model--dm23110003.jpg'); background-size: contain; background-position: center; background-repeat: no-repeat;"></div>
+                           </div>
+                           <!-- Transfer Details -->
+                           <div class="col-12 col-md-8 py-3">
+                              <div class="row">
+                                 <div class="pb-3 col-12 col-md-6 d-flex">
+                                    <div class="text-muted pe-3"><i class="fas fa-car-side"></i></div>
+                                    <div class="text-light font-weight-bold">Airport, Dubai International Airport</div>
+                                 </div>
+                                 <div class="pb-3 col-12 col-md-6 d-flex">
+                                    <div class="text-muted pe-3"><i class="fas fa-map-pin"></i></div>
+                                    <div class="text-light font-weight-bold">City, Dubai Zone 1</div>
+                                 </div>
+                              </div>
+                              <h4 class="py-3 font-weight-bold text-light">Arrival From Dubai Airport to Dubai Zone 1</h4>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Pick-up:</div>
+                                 <div class="text-muted">Airport, Dubai International Airport</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Drop Off:</div>
+                                 <div class="text-muted">City, Dubai Zone 1</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Approximate Time By Hour:</div>
+                                 <div class="text-muted"></div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Vehicle Type:</div>
+                                 <div class="text-muted">Standard 51 Seater (Regular Model).</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Model:</div>
+                                 <div class="text-muted">King Long or Similar</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Max Passenger:</div>
+                                 <div class="text-muted">45</div>
+                              </div>
+                              <div class="d-flex pb-2">
+                                 <div class="text-light font-weight-bold pe-2 text-nowrap">Luggage:</div>
+                                 <div class="text-muted">40 Check-In Bags + 40 Hand Bags</div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Description Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Description</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10">
+                              <span class="text-muted">Airport Arrival Transfer from Dubai Airport to Hotels located in Deira, Bur Dubai, Al Jaddaf, Sheikh Zayed Road, Downtown, Business bay</span>
+                           </div>
+                        </div>
+                        <!-- Meeting Point Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Meeting Point</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10">
+                              <span class="text-muted">Dubai Airport, Paging Area</span>
+                           </div>
+                        </div>
+                        <!-- Conditions Section -->
+                        <div class="d-flex flex-wrap border-top border-secondary mt-3 pt-3">
+                           <div class="pb-3 col-12 col-md-3 col-lg-2">
+                              <span class="font-weight-bold text-light">Conditions</span>
+                           </div>
+                           <div class="pb-3 col-12 col-md-9 col-lg-10 text-muted">
+                              <!-- Conditions content would go here -->
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Modal Footer -->
+                     <div class="modal-footer border-secondary">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </section>
+         <!-- Control Sidebar -->
+         <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+         </aside>
+         <!-- /.control-sidebar -->
+         <!-- Main Footer -->
+         <footer class="main-footer">
+            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+               <b>Version</b> 3.1.0
+            </div>
+         </footer>
+      </div>
+      <!-- ./wrapper -->
+      <!-- REQUIRED SCRIPTS -->
+      <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+      <script src="dist/js/jquery/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <!-- car tranfer -->
+      <script>
+         $('.car-transfer').slick({
+         dots: true,
+         infinite: false,
+         speed: 300,
+         Margin: '20px',
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         
+         });
+      </script>
+      <!-- jQuery -->
+      <script src="/dist/plugins/jquery/jquery.min.js"></script>
+      <!-- Bootstrap 4 -->
+      <script src="/dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Select2 -->
+      <script src="/dist/plugins/select2/js/select2.full.min.js"></script>
+      <!-- Bootstrap4 Duallistbox -->
+      <script src="/dist/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+      <!-- InputMask -->
+      <script src="/dist/plugins/moment/moment.min.js"></script>
+      <script src="/dist/plugins/inputmask/jquery.inputmask.min.js"></script>
+      <!-- date-range-picker -->
+      <script src="/dist/plugins/daterangepicker/daterangepicker.js"></script>
+      <!-- Tempusdominus Bootstrap 4 -->
+      <script src="/dist/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="/dist/js/adminlte.min.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="/dist/js/demo.js"></script>
+      <script>
+         $(function () {
+           //Initialize Select2 Elements
+           $('.select2').select2()
+         
+           //Initialize Select2 Elements
+           $('.select2bs4').select2({
+             theme: 'bootstrap4'
+           })
+         
+           //Datemask dd/mm/yyyy
+           $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+           //Datemask2 mm/dd/yyyy
+           $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+           //Money Euro
+           $('[data-mask]').inputmask()
+         
+           //Date picker
+           $('#reservationdate').datetimepicker({
+               format: 'L'
+           });
+         
+           //Date and time picker
+           $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+         
+           //Date range picker
+           $('#reservation').daterangepicker()
+           //Date range picker with time picker
+           $('#reservationtime').daterangepicker({
+             timePicker: true,
+             timePickerIncrement: 30,
+             locale: {
+               format: 'MM/DD/YYYY hh:mm A'
+             }
+           })
+           //Date range as a button
+           $('#daterange-btn').daterangepicker(
+             {
+               ranges   : {
+                 'Today'       : [moment(), moment()],
+                 'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                 'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                 'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+               },
+               startDate: moment().subtract(29, 'days'),
+               endDate  : moment()
+             },
+             function (start, end) {
+               $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+             }
+           )
+         
+           //Timepicker
+           $('#timepicker').datetimepicker({
+             format: 'LT'
+           })
+         
+           //Bootstrap Duallistbox
+           $('.duallistbox').bootstrapDualListbox()
+         
+           //Colorpicker
+           $('.my-colorpicker1').colorpicker()
+           //color picker with addon
+           $('.my-colorpicker2').colorpicker()
+         
+           $('.my-colorpicker2').on('colorpickerChange', function(event) {
+             $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+           })
+         
+           $("input[data-bootstrap-switch]").each(function(){
+             $(this).bootstrapSwitch('state', $(this).prop('checked'));
+           })
+         
+         })
+         // BS-Stepper Init
+         document.addEventListener('DOMContentLoaded', function () {
+           window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+         })
+         
+         // DropzoneJS Demo Code Start
+         Dropzone.autoDiscover = false
+         
+         // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+         var previewNode = document.querySelector("#template")
+         previewNode.id = ""
+         var previewTemplate = previewNode.parentNode.innerHTML
+         previewNode.parentNode.removeChild(previewNode)
+         
+         var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+           url: "/target-url", // Set the url
+           thumbnailWidth: 80,
+           thumbnailHeight: 80,
+           parallelUploads: 20,
+           previewTemplate: previewTemplate,
+           autoQueue: false, // Make sure the files aren't queued until manually added
+           previewsContainer: "#previews", // Define the container to display the previews
+           clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+         })
+         
+         myDropzone.on("addedfile", function(file) {
+           // Hookup the start button
+           file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+         })
+         
+         // Update the total progress bar
+         myDropzone.on("totaluploadprogress", function(progress) {
+           document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+         })
+         
+         myDropzone.on("sending", function(file) {
+           // Show the total progress bar when upload starts
+           document.querySelector("#total-progress").style.opacity = "1"
+           // And disable the start button
+           file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+         })
+         
+         // Hide the total progress bar when nothing's uploading anymore
+         myDropzone.on("queuecomplete", function(progress) {
+           document.querySelector("#total-progress").style.opacity = "0"
+         })
+         
+         // Setup the buttons for all transfers
+         // The "add files" button doesn't need to be setup because the config
+         // `clickable` has already been specified.
+         document.querySelector("#actions .start").onclick = function() {
+           myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
+         }
+         document.querySelector("#actions .cancel").onclick = function() {
+           myDropzone.removeAllFiles(true)
+         }
+         // DropzoneJS Demo Code End
+         
+      </script>
+      <script>
+         const btn = document.getElementById('roomBtn');
+         const panel = document.getElementById('roomPanel');
+         const roomInfo = document.getElementById('roomInfo');
+         const guestInfo = document.getElementById('guestInfo');
+         
+         const roomSelect = document.getElementById('roomSelect');
+         const adultSelect = document.getElementById('adultSelect');
+         const childSelect = document.getElementById('childSelect');
+         
+         // Toggle dropdown
+         btn.addEventListener('click', (e) => {
+           e.stopPropagation();
+           panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+         });
+         
+         // Hide when clicking outside
+         document.addEventListener('click', () => {
+           panel.style.display = 'none';
+         });
+         
+         // Prevent overlay from closing when clicking inside
+         panel.addEventListener('click', (e) => {
+           e.stopPropagation();
+         });
+         
+         // Update button text on change
+         [roomSelect, adultSelect, childSelect].forEach(select => {
+           select.addEventListener('change', () => {
+             const rooms = roomSelect.value;
+             const adults = adultSelect.value;
+             const children = childSelect.value;
+         
+             roomInfo.textContent = `${rooms} Room${rooms > 1 ? 's' : ''},`;
+             guestInfo.textContent = `${adults} Adult${adults > 1 ? 's' : ''} ${children} Children`;
+           });
+         });
+      </script>
+      <!-- transfer Passengers  js-->
+      <script>
+         const passengerBtn = document.getElementById("passengerBtn");
+         const passengerDropdown = document.getElementById("passengerDropdown");
+         
+         passengerBtn.addEventListener("click", () => {
+           passengerDropdown.style.display = passengerDropdown.style.display === "none" ? "block" : "none";
+         });
+         
+         document.addEventListener("click", function (event) {
+           if (!passengerBtn.contains(event.target) && !passengerDropdown.contains(event.target)) {
+             passengerDropdown.style.display = "none";
+           }
+         });
+         
+         function updateCount(type, change) {
+           const input = document.getElementById(type);
+           let value = parseInt(input.value) + change;
+           if (value < 0) value = 0;
+           input.value = value;
+         
+           // Update counts
+           const adults = parseInt(document.getElementById("adults").value);
+           const children = parseInt(document.getElementById("children").value);
+           const total = adults + children;
+         
+           document.getElementById("adult-count").innerText = adults;
+           document.getElementById("child-count").innerText = children;
+           document.getElementById("total-passenger").innerText = total;
+         
+           if (type === 'children') updateChildAgeFields(children);
+         }
+         
+         function updateChildAgeFields(count) {
+           const container = document.getElementById("child-age-inputs");
+           container.innerHTML = '';
+           for (let i = 1; i <= count; i++) {
+             container.innerHTML += `
+               <div class="form-group row align-items-center">
+                 <label class="col-sm-4 col-form-label">Child ${i} Age</label>
+                 <div class="col-sm-8">
+                   <select class="form-control">
+                     ${Array.from({ length: 12 }, (_, i) => `<option>${i}</option>`).join('')}
+                   </select>
+                 </div>
+               </div>
+             `;
+           }
+         }
+      </script>
+   </body>
+</html>

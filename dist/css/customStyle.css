@@ -1,0 +1,394 @@
+/* =======================
+   Layout Adjustments
+======================= */
+body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) 
+.content-wrapper,
+body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) 
+.main-footer,
+body:not(.sidebar-mini-md):not(.sidebar-mini-xs):not(.layout-top-nav) 
+.main-header {
+    margin-left: 0px !important;
+}
+
+/* =======================
+   Logo Styling
+======================= */
+.logo a {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* =======================
+   Section Title Styling
+======================= */
+.section-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #007bff;
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+/* =======================
+   Recommended Hotels Carousel
+======================= */
+.recommended-hotels .slick-slide {
+    margin: 0 10px;
+}
+
+.recommended-hotels .card .card-body {
+    height: 350px;
+    padding: 0;
+}
+
+.recommended-hotels .card .card-body .card-details {
+    padding: 1rem;
+}
+
+.recommended-hotels .card .card-body .card-footer {
+    position: absolute;
+    bottom: 16px;
+}
+
+/* =======================
+   Recommended Activities Carousel
+======================= */
+.recommended-activites .slick-slide {
+    margin: 0 10px;
+}
+
+/* =======================
+   Custom Utilities
+======================= */
+.border-muted-custom {
+    border: 1px solid #dee2e6;
+}
+
+.fs-8 {
+    font-size: 0.875rem;
+}
+
+/* =======================
+   Modal Fix
+======================= */
+.modal-backdrop {
+    display: none;
+}
+
+/* =======================
+   Stepper Input Design
+======================= */
+.stepper-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stepper-input-field input {
+    width: 50px;
+    text-align: center;
+}
+
+/* =======================
+   Transfer Passenger Inputs
+======================= */
+.transfer_inp_passenger_bgxx {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    background: #f8f9fa;
+}
+
+.transfer_inp_passenger_inp {
+    margin-bottom: 10px;
+}
+
+/* =======================
+   Icon Button Styling (Material Icons)
+======================= */
+.mat-icon-button {
+    border: none;
+    background: none;
+    color: #007bff;
+    cursor: pointer;
+}
+
+/* =======================
+   Sidebar Styling
+======================= */
+.main-sidebar {
+    height: 100% !important;
+}
+
+.main-sidebar,
+.main-sidebar::before {
+    width: 305px;
+}
+
+.layout-navbar-fixed.layout-fixed .wrapper .sidebar {
+    margin-top: 10px;
+}
+
+.sidebar-mini.sidebar-collapse .main-sidebar {
+    width: 0px;
+}
+
+/* main header light bg */
+.position-absolute.w-100.h-100
+{
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.hotel-details .content-wrapper .content-header .container-fluid .position-relative
+{
+  min-height: 490px !important;
+
+}
+
+.hotel-details .room-rate td
+{
+  text-wrap: nowrap;
+}
+
+
+/* =======================
+   Responsive Breakpoints
+======================= */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 433px)
+{
+  .alphabetical-box-card .sm-ml-0
+  {
+    margin-left: 0 !important;
+  }
+  .card-body
+  {
+   padding: 5px !important;
+  }
+
+
+}
+@media (max-width: 568px) {
+  .main-header .w-100 .navbar-nav .nav-item:nth-child(1) ,
+  .main-header > .navbar-nav .nav-item:nth-child(3),.main-header > .navbar-nav .nav-item:nth-child(4)
+  {
+   display: block !important;
+  }
+
+  
+  .main-header > .navbar-nav .nav-item:nth-child(5)
+  {
+   display: none !important;
+  }
+
+   form .btn.mr-3.btn-outline-secondary.btn-sm.text-white
+   {
+    margin: 0 !important;
+   }
+
+   .recommended-hotels .card .card-body {
+    height: 380px;
+    padding: 0;
+}
+.recommended-hotels .slick-arrow 
+{
+  display: none !important;
+}
+.recommended-activites .slick-arrow
+{
+  display: none !important;
+}
+
+.donut-chart-data
+{
+  margin-bottom: 40px;
+}
+#hotel-details-motel .star-rating
+{
+ display: none;
+}
+ .room-available
+{
+    margin-top: 10px !important;
+}
+.m-0.text-theme.my-basket  {
+  font-size: 1.1rem !important;
+}
+.my-basket-cart-line span
+{
+  font-size: 0.8rem !important;
+}
+.hotel-detail-breadcrumb
+{
+  font-size: 1.1rem !important;
+}
+.hotel-details-box .hotel-details-heading
+{
+  font-size: 1rem !important;
+}
+.car-card-box .policy-details
+{
+  display: flex !important;
+  flex-direction: column;
+}
+.hotel-cart .btn.btn-outline-theme.py-2.px-3, .tranfer-cart .btn.btn-outline-theme.py-2.px-3, 
+.activity-cart .btn.btn-outline-theme.py-2.px-3
+
+{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.tranfer-cart .transfer-current-basket
+{
+  margin-bottom: 30px;
+}
+.activity-detail-home-card .activity-detail-card-heading,.place-description-heading,.option-tour-heading
+{
+  font-size: 1.1rem;
+}
+.option-tour .card-header
+{
+  padding-left: 5px;
+}
+.activity-cart-card-heading
+{
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+#passengerBtn
+{
+  font-size: 1rem;
+}
+
+} 
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+  /* Example: Make sidebar collapsible */
+ 
+  .w-75 .card-body .tab-content form .row
+{
+   gap: 10px;
+   display: flex;
+}
+
+.hotel-home .content-wrapper .content-header .container-fluid .position-relative,
+.hotel-result .content-wrapper .content-header .container-fluid .position-relative
+{
+  min-height: 790px !important;
+}
+.hotel-details .content-wrapper .content-header .container-fluid .position-relative
+{
+  min-height: 600px !important;
+
+}
+
+.transfer-home-header,.activity-home-header
+{
+  min-height: 700px !important;
+
+}
+.activity-home-header
+{
+  min-height: 600px !important;
+
+}
+
+.acitvity-detail-home-header
+{
+  min-height: 600px !important;
+
+}
+.activy-detail-header
+{
+  min-height: 500px !important;
+ 
+}
+#passengerBtn
+{
+  font-size: 1rem;
+}
+
+
+
+
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+
+  .filter-sidebar {
+    position: absolute !important;
+  }
+  /* main header navbar */
+
+  .main-header .navbar-nav
+  {
+    margin-left: 0.8rem !important;
+  }
+  #passengerBtn
+  {
+    font-size: 0.9rem;
+  }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1200px) {
+
+  .card.card-primary.card-tabs.position-absolute.w-75
+  {
+    width: 95% !important;
+  }
+  .car-transfer .dettail-img-box img
+{
+  width: 300px !important;
+}
+
+}
+
+
+
+/* ===========================
+   Custom Breakpoint from Your Code
+=========================== */
+
+/* =======================
+   Responsive Filter Sidebar
+======================= */
+
+
+@media (max-width: 1060px) {
+ 
+  /* .w-75 .card-body .tab-content form .col-md-4
+  {
+    max-width: 100% !important;
+    flex: 0 0 48.333333% !important;
+  } */
+  .w-75 .card-body .tab-content form .form-group.d-flex.mt-3
+  {
+    flex-direction: column;
+    gap:10px;
+  }
+}
+
+@media (max-width: 1141px) {
+
+  .search-result-main .hotel-main-card-box .extend-compact-box
+ {
+  margin-top: 15px;
+ }
+}
+
+@media (max-width: 1236px) and (min-width: 1200px)
+{
+  .result-details-layout
+  {
+    flex:0 0 72.666667%;
+    max-width: 72.666667%;
+  
+  }
+}

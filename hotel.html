@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Trip 69</title>
+      <!-- Tempus Dominus Bootstrap 4 Datepicker -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+      <!-- Slick Carousel CSS -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+      <!-- right sidebar -->
+      <link rel="stylesheet" href="dist/css/overlayScrollbars/css/OverlayScrollbars.min.css">
+      <link rel="stylesheet" href="dist/css/adminlte.min.css">
+      <link rel="stylesheet" href="dist/css/fontawesome-free/css/all.min.css">
+
+      <!-- custom style -->
+      <link rel="stylesheet" href="/dist/css/customStyle.css">
+   </head>
+   <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed hotel-home">
+      <div class="wrapper">
+         <!-- Navbar -->
+         <nav class="main-header navbar navbar-expand navbar-dark">
+            <!-- Left navbar links -->
+            <div class="w-100">
+               <ul class="navbar-nav ml-auto w-75 d-flex align-items-center">
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <div class="logo">
+                        <a href="#"><b>Trip</b>69</a>
+                     </div>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block active">
+                     <a href="/hotel.html" class="nav-link">Hotels</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <a href="/transfer.html" class="nav-link">Transfer</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <a href="/activity.html" class="nav-link">Activity</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+               <!-- Navbar Search -->
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="#" class="nav-link">₹50,000</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="#" class="nav-link">Recharge</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <div class="user-panel d-flex mr-3">
+                     <div class="image">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                     </div>
+                     <div class="info">
+                        <a href="#" class="d-block">Ram Sharma</a>
+                     </div>
+                  </div>
+               </li>
+               <li class="nav-item d-none d-sm-flex align-items-center" title="logout">
+                  <a href="/login.html" class="d-sm-flex align-items-center">
+                     <i class="fas fa-power-off"></i>
+                     <!-- Logout -->
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                  <i class="fas fa-th-large"></i>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <!-- /.navbar -->
+         <!-- Content Wrapper. Contains page content -->
+         <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header p-0">
+               <div class="container-fluid p-0">
+                  <div class="position-relative" style="min-height: 550px; border-radius: 0 0 10px 10px; overflow: hidden;">
+                     <!-- Background Image -->
+                     <div class="w-100 h-100 position-absolute top-0 start-0" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;"></div>
+                     <!-- Dark Overlay -->
+                     <div class="position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+                     <!-- Tabs -->
+                     <div class="card card-primary card-tabs position-absolute w-75" style="top: 50%; left: 50%; transform: translate(-50%,-50%);">
+                        <div class="card-header p-0">
+                           <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                              <li class="nav-item">
+                                 <a class="nav-link active" id="tab1-tab" data-toggle="pill" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Hotel</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" 
+                                    href="/transfer.html"
+                                    >Transfer</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" 
+                                    href="/activity.html">Activity</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="card-body">
+                           <div class="tab-content" id="custom-tabs-one-tabContent">
+                              <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                                 <form>
+                                    <!-- <div class="section-title">Search Hotel</div> -->
+                                    <div class="row">
+                                       <div class="col-md-4">
+                                          <label>Country</label>
+                                          <div class="d-flex rounded" style="border: 1px solid grey;">
+                                             <div class="nav-item dropdown border-right">
+                                                <a class="nav-link  text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-passport"></i>
+                                                </a>
+                                                <div class="dropdown-menu mt-0">
+                                                   <a class="dropdown-item" href="#" data-widget="iframe-close" data-type="all">Pax Passport</a>
+                                                   <a class="dropdown-item" href="#" data-widget="iframe-close" data-type="all-other">Residential</a>
+                                                </div>
+                                             </div>
+                                             <input type="text" class="form-control rounded-0 border-0" name="Country" list="country" placeholder="Enter Pax Passport" required>
+                                             <datalist id="country">
+                                                <option value="India"></option>
+                                                <option value="Nepal"></option>
+                                                <option value="China"></option>
+                                                <option value="Bhutan"></option>
+                                             </datalist>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-4">
+                                          <label>City</label>
+                                          <div class="d-flex rounded" style="border: 1px solid grey;">
+                                             <div class="nav-item dropdown border-right">
+                                                <a class="nav-link text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                             </div>
+                                             <input type="text" class="form-control rounded-0 border-0" name="City" list="city" placeholder="Enter a destination city" required>
+                                             <datalist id="city">
+                                                <option value="New Delhi"></option>
+                                                <option value="Jammu and Kashmir"></option>
+                                                <option value="Haryana"></option>
+                                             </datalist>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-4">
+                                          <div class="form-group">
+                                             <label>Check In & Check Out</label>
+                                             <div class="d-flex border rounded">
+                                                <span class="input-group-text rounded-0">
+                                                <i class="far fa-calendar-alt"></i>
+                                                </span>
+                                                <!-- Check-in -->
+                                                <div class="input-group date" id="checkin-date" data-target-input="nearest">
+                                                   <div class="input-group-prepend w-100">
+                                                      <button class="btn w-100 h-100 fs-7 rounded-0 rounded-start py-1 shadow-none" data-target="#checkin-date" data-toggle="datetimepicker">
+                                                         <!-- <span class="text-secondary d-block d-sm-inline">Check-in:</span><br> -->
+                                                         <span id="checkin-label" class="text-white fw-bold">--</span>
+                                                      </button>
+                                                   </div>
+                                                </div>
+                                                <!-- Number of Nights -->
+                                                <div class="text-center border-start border-end d-flex flex-column justify-content-center">
+                                                   <span class="d-block text-grey fw-bold" id="night-count">0</span>
+                                                   <span class="d-block text-secondary fs-9">Night(s)</span>
+                                                </div>
+                                                <!-- Check-out -->
+                                                <div class="input-group date" id="checkout-date" data-target-input="nearest">
+                                                   <div class="input-group-append w-100">
+                                                      <button class="btn w-100 h-100 fs-7 rounded-0 rounded-end py-1 shadow-none" data-target="#checkout-date" data-toggle="datetimepicker">
+                                                         <!-- <span class="text-secondary d-block d-sm-inline">Check-out:</span><br> -->
+                                                         <span id="checkout-label" class="text-white fw-bold">--</span>
+                                                      </button>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row d-flex align-items-center">
+                                       <div class="col-md-4">
+                                          <div class="form-group">
+                                             <label>No. Of Members</label>
+                                             <button id="roomBtn" class="btn w-100 p-0 py-2 fs-7 text-muted fw-bold text-start d-flex" style="border: 1px solid grey;">
+                                             <span class="px-2 text-secondary"><i class="fas fa-user-friends"></i></span>
+                                             <span class="d-none d-lg-inline" id="roomInfo">1 Room,</span>
+                                             <span id="guestInfo">2 Adults 1 Children</span>
+                                             </button>
+                                             <div id="roomPanel"
+                                                class="card border-muted shadow-sm"
+                                                style="display: none; position: absolute; z-index: 1050; width: 310px;">
+                                                <div class="card-body p-3">
+                                                   <!-- Room Selector -->
+                                                   <div class="row g-2 mb-3 align-items-center">
+                                                      <div class="col-6">
+                                                         <label for="roomSelect" class="mb-0 fw-semibold text-grey">Room</label>
+                                                      </div>
+                                                      <div class="col-6">
+                                                         <select id="roomSelect" class="form-select form-select-sm">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+                                                   <!-- Guest Selector -->
+                                                   <div class="row g-2">
+                                                      <div class="col-3">
+                                                         <label for="adultSelect" class="form-label text-muted small">Adults</label>
+                                                         <select id="adultSelect" class="form-select form-select-sm">
+                                                            <option value="1">1</option>
+                                                            <option value="2" selected>2</option>
+                                                            <option value="3">3</option>
+                                                         </select>
+                                                      </div>
+                                                      <div class="col-3">
+                                                         <label for="childSelect" class="form-label text-muted small">Children</label>
+                                                         <select id="childSelect" class="form-select form-select-sm">
+                                                            <option value="0">0</option>
+                                                            <option value="1" selected>1</option>
+                                                            <option value="2">2</option>
+                                                         </select>
+                                                      </div>
+                                                      <div class="col-3">
+                                                         <label for="bedTypeSelect" class="form-label text-muted small">Bed Type</label>
+                                                         <select id="bedTypeSelect" class="form-select form-select-sm">
+                                                            <option>Double</option>
+                                                            <option>Twin</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-2 mt-3 ">
+                                          <a  href="/hotel2.html" type="submit" class="btn btn-primary btn-block">Search</a>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-lg-6">
+                                          <div class="form-group d-flex mt-3">
+                                             <div class="custom-control custom-radio mr-3">
+                                                <input class="custom-control-input" type="radio" id="type1" name="typeRadio" value="type1" checked>
+                                                <label for="type1" class="custom-control-label">Available</label>
+                                             </div>
+                                             <div class="custom-control custom-radio mr-3">
+                                                <input class="custom-control-input" type="radio" id="type2" name="typeRadio" value="type2">
+                                                <label for="type2" class="custom-control-label">On Request</label>
+                                             </div>
+                                             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#super-search-hotel">
+                                             <i class="fas fa-filter mr-1"></i> Super Search
+                                             </button>
+                                             <!-- super filter model -->
+                                             <div class="modal fade" id="super-search-hotel" style="display: none;" aria-hidden="true">
+                                                <div class="modal-dialog modal-xl">
+                                                   <div class="modal-content">
+                                                      <div class="modal-header">
+                                                         <h4 class="modal-title">Super Search</h4>
+                                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                         <span aria-hidden="true">×</span>
+                                                         </button>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                         <div class="row">
+                                                            <div class="col-lg-3">
+                                                               <div class="form-group">
+                                                                  <label><strong>Star Rating</strong></label>
+                                                                  <div class="d-flex flex-column gap-2 mt-2">
+                                                                     <div class="icheck-primary">
+                                                                        <input type="checkbox" id="rating5" name="ratings" value="5">
+                                                                        <label for="rating5">
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        </label>
+                                                                     </div>
+                                                                     <div class="icheck-primary">
+                                                                        <input type="checkbox" id="rating4" name="ratings" value="4">
+                                                                        <label for="rating4">
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        </label>
+                                                                     </div>
+                                                                     <div class="icheck-primary">
+                                                                        <input type="checkbox" id="rating3" name="ratings" value="3">
+                                                                        <label for="rating3">
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        </label>
+                                                                     </div>
+                                                                     <div class="icheck-primary">
+                                                                        <input type="checkbox" id="rating2" name="ratings" value="2">
+                                                                        <label for="rating2">
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        </label>
+                                                                     </div>
+                                                                     <div class="icheck-primary">
+                                                                        <input type="checkbox" id="rating1" name="ratings" value="1">
+                                                                        <label for="rating1">
+                                                                        <i class="fas fa-star text-warning"></i>
+                                                                        </label>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                               <div class="form-group">
+                                                                  <label class="font-weight-bold">Hotel Style</label>
+                                                                  <div class="row d-flex flex-column">
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="hotelStyle1">
+                                                                           <label for="hotelStyle1">Beach Hotel</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="hotelStyle2">
+                                                                           <label for="hotelStyle2">Boutique</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="hotelStyle3">
+                                                                           <label for="hotelStyle3">Boutique Resort</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="hotelStyle4">
+                                                                           <label for="hotelStyle4">Bungalow</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="hotelStyle5">
+                                                                           <label for="hotelStyle5">Cottage</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="hotelStyle6">
+                                                                           <label for="hotelStyle6">Golf Course</label>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                               <div class="form-group">
+                                                                  <label class="font-weight-bold">Location</label>
+                                                                  <div class="row d-flex flex-column">
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="location1">
+                                                                           <label for="location1"> Bang Saray </label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="location2">
+                                                                           <label for="location2">Banglamung</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="location3">
+                                                                           <label for="location1">Bangsean Beach</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="location4">
+                                                                           <label for="location4">Central Pattaya</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="location5">
+                                                                           <label for="location5">Chonburi</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="location6">
+                                                                           <label for="location6">Jomtien Beach</label>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                            <div class="col-lg-3">
+                                                               <div class="form-group">
+                                                                  <label class="font-weight-bold">Chains</label>
+                                                                  <div class="row d-flex flex-column">
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="chain1">
+                                                                           <label for="chain1">Accor - All Seasons</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="chain2">
+                                                                           <label for="chain2">Accor - Ibis</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="chain3">
+                                                                           <label for="chain3">Accor - Mercure</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="chain4">
+                                                                           <label for="chain4">Accor - Pullman</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="chain5">
+                                                                           <label for="chain5">Amari</label>
+                                                                        </div>
+                                                                     </div>
+                                                                     <div class="col">
+                                                                        <div class="icheck-primary">
+                                                                           <input type="checkbox" id="chain6">
+                                                                           <label for="chain6">Ambassador</label>
+                                                                        </div>
+                                                                     </div>
+                                                                  </div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                      </div>
+                                                      <div class="modal-footer justify-content-end">
+                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                         <button type="button" class="btn btn-default">Clear</button>
+                                                         <button type="button" class="btn btn-primary">Search</button>
+                                                      </div>
+                                                   </div>
+                                                   <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-12"><span><i class="fas fa-thumbs-up mr-1"></i>
+                                          </span><span class="font-weight-bold"> Recommended Destination</span>
+                                       </div>
+                                       <div class="col-lg-6 mt-3">
+                                          <button type="button" class="btn mr-3 btn-outline-secondary btn-sm text-white">New Delhi</button>
+                                          <button type="button" class="btn mr-3 btn-outline-secondary btn-sm text-white">Faridabad</button>
+                                          <button type="button" class="btn mr-3 btn-outline-secondary btn-sm text-white">Pattaya,Chon Buri</button>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <section class="content mt-5">
+               <div class="container">
+                  <h4 class="mb-3 font-weight-bold"> <span class="text-warning">||</span> RECOMMENDED HOTELS</h4>
+                  <div class="recommended-hotels">
+                     <div class="card card-primary card-outline">
+                        <div class="card-body box-profile position-relative">
+                           <div>
+                              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="img" class="img-fluid">
+                           </div>
+                           <div class="card-details">
+                              <h5 class="profile-username">W Abu Dhabi Yas Island</h5>
+                              <p class="text-muted">United Arab Emirates, Abu Dhabi</p>
+                              <div class="card-footer">
+                                 <a href="/hotel-details.html" class="d-flex align-items-center"> <span class="bg-primary rounded-circle" style="height: 20px;  width: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-angle-right right"></i></span>View detail</a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /.card-body -->
+                     </div>
+                     <div class="card card-primary card-outline">
+                        <div class="card-body box-profile position-relative">
+                           <div>
+                              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="img" class="img-fluid">
+                           </div>
+                           <div class="card-details">
+                              <h5 class="profile-username">W Abu Dhabi Yas Island</h5>
+                              <p class="text-muted">United Arab Emirates, Abu Dhabi</p>
+                              <div class="card-footer">
+                                 <a href="/hotel-details.html" class="d-flex align-items-center"> <span class="bg-primary rounded-circle" style="height: 20px;  width: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-angle-right right"></i></span>View detail</a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /.card-body -->
+                     </div>
+                     <div class="card card-primary card-outline">
+                        <div class="card-body box-profile position-relative">
+                           <div>
+                              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="img" class="img-fluid">
+                           </div>
+                           <div class="card-details">
+                              <h5 class="profile-username">W Abu Dhabi Yas Island</h5>
+                              <p class="text-muted">United Arab Emirates, Abu Dhabi</p>
+                              <div class="card-footer">
+                                 <a href="#" class="d-flex align-items-center"> <span class="bg-primary rounded-circle" style="height: 20px;  width: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-angle-right right"></i></span>View detail</a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /.card-body -->
+                     </div>
+                     <div class="card card-primary card-outline">
+                        <div class="card-body box-profile position-relative">
+                           <div>
+                              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="img" class="img-fluid">
+                           </div>
+                           <div class="card-details">
+                              <h5 class="profile-username">W Abu Dhabi Yas Island</h5>
+                              <p class="text-muted">United Arab Emirates, Abu Dhabi</p>
+                              <div class="card-footer">
+                                 <a href="#" class="d-flex align-items-center"> <span class="bg-primary rounded-circle" style="height: 20px;  width: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-angle-right right"></i></span>View detail</a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /.card-body -->
+                     </div>
+                     <div class="card card-primary card-outline">
+                        <div class="card-body box-profile position-relative">
+                           <div>
+                              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="img" class="img-fluid">
+                           </div>
+                           <div class="card-details">
+                              <h5 class="profile-username">W Abu Dhabi Yas Island</h5>
+                              <p class="text-muted">United Arab Emirates, Abu Dhabi</p>
+                              <div class="card-footer">
+                                 <a href="#" class="d-flex align-items-center"> <span class="bg-primary rounded-circle" style="height: 20px;  width: 20px; margin-right: 5px; display: flex; align-items: center; justify-content: center;"><i class="fas fa-angle-right right"></i></span>View detail</a>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /.card-body -->
+                     </div>
+                  </div>
+               </div>
+               <div class="container">
+                  <h4 class="mb-3 font-weight-bold"> <span class="text-warning">||</span> Booking Dashboard</h4>
+                  <div class="row booking-dashboard">
+                     <div class="col-md-6">
+                        <div class="card">
+                           <div class="card-header">
+                              <h3 class="card-title"><i class="fas fa-exclamation-triangle text-warning mr-1"></i> Attention</h3>
+                              <div class="card-tools">
+                                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                                 <i class="fas fa-minus"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="card-body p-0">
+                              <table class="table table-striped projects">
+                                 <tbody>
+                                    <tr>
+                                       <td>
+                                          Alert 
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar bg-green" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-danger">0</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          Transfer Money 
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar badge-danger" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="width: 2%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-danger">2</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          On Request 
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar bg-warning"progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-warning">40</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          Request Amend 
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar bg-green" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-success">68</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          Wait
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar bg-green" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-success">68</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          Confirm 
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar bg-green" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-success">68</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          Not Confirm 
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar bg-green" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-success">68</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          Cancel Confirm 
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar bg-green" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-success">68</span>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>
+                                          Cancel Charge
+                                       </td>
+                                       <td class="project_progress">
+                                          <div class="progress progress-sm">
+                                             <div class="progress-bar bg-blue" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                             </div>
+                                          </div>
+                                       </td>
+                                       <td class="project-state">
+                                          <span class="badge badge-warning">30</span>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <!-- /.card-body -->
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <!-- DONUT CHART -->
+                        <div class="card donut-chart-data">
+                           <div class="card-header">
+                              <div class="card-tools">
+                                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                 <i class="fas fa-minus"></i>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="card-body">
+                              <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                           </div>
+                           <!-- /.card-body -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+               <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+            <!-- Main Footer -->
+            <footer class="main-footer">
+               <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+               All rights reserved.
+               <div class="float-right d-none d-sm-inline-block">
+                  <b>Version</b> 3.1.0
+               </div>
+            </footer>
+         </div>
+      </div>
+      <!-- REQUIRED SCRIPTS -->
+      <!-- jQuery -->
+      <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+      <script src="dist/js/jquery/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <!-- <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+      <script src="dist/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- overlayScrollbars -->
+      <!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
+      <script src="dist/js/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="dist/js/adminlte.js"></script>
+      <script src="dist/js/chart.js/Chart.min.js"></script>
+      <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+      <script src="dist/js/pages/dashboard2.js"></script>
+      <!-- date-range-picker -->
+      <script src="/dist/plugins/daterangepicker/daterangepicker.js"></script>
+      <!-- bootstrap color picker -->
+      <script src="/dist/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+      <script src="dist/js/demo.js"></script>
+      <!-- slick slider -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     
+    
+      <!-- jQuery (already in AdminLTE) -->
+      <!-- Slick Carousel JS -->
+      <script>
+         $('.recommended-hotels').slick({
+         dots: true,
+         infinite: false,
+         speed: 300,
+         Margin: '20px',
+         slidesToShow: 4,
+         slidesToScroll: 4,
+         responsive: [
+           {
+             breakpoint: 1024,
+             settings: {
+               slidesToShow: 3,
+               slidesToScroll: 3,
+               infinite: true,
+               dots: true
+             }
+           },
+           {
+             breakpoint: 768,
+             settings: {
+               slidesToShow: 2,
+               slidesToScroll: 2
+             }
+           },
+           {
+             breakpoint: 480,
+             settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+             }
+           }
+         ]
+         });
+      </script>
+      <!-- chart -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+           var donutChartCanvas = document.getElementById('donutChart').getContext('2d');
+         
+           var donutData = {
+             labels: [
+               'Confirm',
+               'Not Confirm',
+               'Cancel Confirm',
+               'cancel Charge',
+               
+               
+             ],
+             datasets: [{
+               data: [700, 500, 400, 600,],
+               backgroundColor: ['#00a65a', '#f39c12', '#00c0ef', '#3c8dbc']
+             }]
+           };
+         
+           var donutOptions = {
+             maintainAspectRatio: false,
+             responsive: true
+           };
+         
+           new Chart(donutChartCanvas, {
+             type: 'doughnut',
+             data: donutData,
+             options: donutOptions
+           });
+         });
+      </script>
+      <!-- No. of members -->
+      <script>
+         const btn = document.getElementById('roomBtn');
+         const panel = document.getElementById('roomPanel');
+         const roomInfo = document.getElementById('roomInfo');
+         const guestInfo = document.getElementById('guestInfo');
+         
+         const roomSelect = document.getElementById('roomSelect');
+         const adultSelect = document.getElementById('adultSelect');
+         const childSelect = document.getElementById('childSelect');
+         
+         // Toggle dropdown
+         btn.addEventListener('click', (e) => {
+           e.stopPropagation();
+           panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+         });
+         
+         // Hide when clicking outside
+         document.addEventListener('click', () => {
+           panel.style.display = 'none';
+         });
+         
+         // Prevent overlay from closing when clicking inside
+         panel.addEventListener('click', (e) => {
+           e.stopPropagation();
+         });
+         
+         // Update button text on change
+         [roomSelect, adultSelect, childSelect].forEach(select => {
+           select.addEventListener('change', () => {
+             const rooms = roomSelect.value;
+             const adults = adultSelect.value;
+             const children = childSelect.value;
+         
+             roomInfo.textContent = `${rooms} Room${rooms > 1 ? 's' : ''},`;
+             guestInfo.textContent = `${adults} Adult${adults > 1 ? 's' : ''} ${children} Children`;
+           });
+         });
+      </script>
+      <!-- date picker -->
+      <script>
+         $(function () {
+           let checkinDate = null;
+           let checkoutDate = null;
+         
+           $('#checkin-date').datetimepicker({
+             format: 'L',
+             icons: {
+               date: 'fa fa-calendar'
+             }
+           });
+         
+           $('#checkout-date').datetimepicker({
+             format: 'L',
+             icons: {
+               date: 'fa fa-calendar'
+             },
+             useCurrent: false
+           });
+         
+           function updateNightCount() {
+             if (checkinDate && checkoutDate) {
+               const nights = moment(checkoutDate).diff(moment(checkinDate), 'days');
+               $('#night-count').text(nights > 0 ? nights : 0);
+             }
+           }
+         
+           $('#checkin-date').on('change.datetimepicker', function (e) {
+             checkinDate = e.date;
+             $('#checkin-label').text(e.date.format('ddd, DD MMM YYYY'));
+             $('#checkout-date').datetimepicker('minDate', e.date.add(1, 'days'));
+             updateNightCount();
+           });
+         
+           $('#checkout-date').on('change.datetimepicker', function (e) {
+             checkoutDate = e.date;
+             $('#checkout-label').text(e.date.format('ddd, DD MMM YYYY'));
+             updateNightCount();
+           });
+         });
+      </script>
+   </body>
+</html>

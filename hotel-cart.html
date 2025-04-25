@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Cart Page</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+      <!-- Leaflet CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+      <!-- Leaflet JS -->
+      <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+      <!-- Ion Slider -->
+      <link rel="stylesheet" href="/dist/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+      <!-- bootstrap slider -->
+      <link rel="stylesheet" href="/dist/plugins/bootstrap-slider/css/bootstrap-slider.min.css">
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="dist/css/fontawesome-free/css/all.min.css">
+      <!-- <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> -->
+      <!-- overlayScrollbars -->
+      <link rel="stylesheet" href="dist/css/overlayScrollbars/css/OverlayScrollbars.min.css">
+      <!-- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> -->
+      <!-- Theme style -->
+      <link rel="stylesheet" href="dist/css/adminlte.min.css">
+      <!-- custom style -->
+      <link rel="stylesheet" href="/dist/css/customStyle.css">
+      <style>
+         :root {
+         --card-bg: #ffffff;
+         --card-border: #dee2e6;
+         --text-color: #495057;
+         --text-muted: #6c757d;
+         --bg-light: #f8f9fa;
+         }
+         .dark-mode {
+         --card-bg: #343a40;
+         --card-border: #454d55;
+         --text-color: #f8f9fa;
+         --text-muted: #adb5bd;
+         --bg-light: #212529;
+         }
+         .card-theme {
+         background-color: var(--card-bg);
+         border-color: var(--card-border) !important;
+         }
+         .text-theme {
+         color: var(--text-color) !important;
+         }
+         .text-muted-theme {
+         color: var(--text-muted) !important;
+         }
+         .bg-light-theme {
+         background-color: var(--bg-light) !important;
+         }
+         .border-theme {
+         border-color: var(--card-border) !important;
+         }
+         .btn-outline-theme {
+         color: var(--text-color);
+         border-color: var(--card-border);
+         }
+         .btn-outline-theme:hover {
+         background-color: var(--bg-light);
+         }
+      </style>
+   </head>
+   <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed hotel-cart">
+      <div class="wrapper">
+         <nav class="main-header navbar navbar-expand navbar-dark">
+            <!-- Left navbar links -->
+            <div class="w-100">
+               <ul class="navbar-nav ml-auto w-75 d-flex align-items-center">
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <div class="logo">
+                        <a href="#"><b>Trip</b>69</a>
+                     </div>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block active">
+                     <a href="/hotel.html" class="nav-link">Hotels</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <a href="/transfer.html" class="nav-link">Transfer</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <a href="/activity.html" class="nav-link">Activity</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+               <!-- Navbar Search -->
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="#" class="nav-link">₹50,000</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="#" class="nav-link">Recharge</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <div class="user-panel d-flex mr-3">
+                     <div class="image">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                     </div>
+                     <div class="info">
+                        <a href="#" class="d-block">Ram Sharma</a>
+                     </div>
+                  </div>
+               </li>
+               <li class="nav-item d-none d-sm-flex align-items-center" title="logout">
+                  <a href="/login.html" class="d-sm-flex align-items-center">
+                     <i class="fas fa-power-off"></i>
+                     <!-- Logout -->
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                  <i class="fas fa-th-large"></i>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <!-- Content Wrapper. Contains page content -->
+         <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+               <div class="container">
+                  <div class="row mb-2">
+                     <div class=" col-4 col-sm-6">
+                        <h1 class="m-0 text-theme my-basket">My Basket</h1>
+                     </div>
+                     <!-- /.col -->
+                     <div class="col-8 col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                           <li class="breadcrumb-item"><a href="/hotel2.html" class="text-primary">Hotel Result</a></li>
+                           <li class="breadcrumb-item active">My Basket</li>
+                        </ol>
+                     </div>
+                     <!-- /.col -->
+                  </div>
+                  <!-- /.row -->
+               </div>
+               <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <section class="content">
+               <div class="container">
+                  <!-- Booking Steps -->
+                  <div class="card card-theme mb-4">
+                     <div class="card-body">
+                        <div class="d-flex justify-content-center align-items-center my-basket-cart-line">
+                           <div class="col-auto px-2 text-center">
+                              <span class="badge bg-primary rounded-circle p-2 d-none d-md-inline">
+                              <i class="fas fa-shopping-cart"></i>
+                              </span>
+                              <span class="ml-2 font-weight-bold text-primary">My Basket</span>
+                           </div>
+                           <div class="col-1 px-2 d-none d-md-inline">
+                              <hr class="border-top border-2 border-secondary opacity-50">
+                           </div>
+                           <div class="d-inline d-md-none">
+                              <span class="text-primary"><i class="fas fa-angle-right"></i></span>
+                           </div>
+                           <div class="col-auto px-2 text-center opacity-50">
+                              <span class="badge bg-secondary rounded-circle p-2 d-none d-md-inline">
+                              <i class="far fa-credit-card"></i>
+                              </span>
+                              <span class="ml-2 font-weight-bold text-secondary">Payment</span>
+                           </div>
+                           <div class="col-1 px-2 d-none d-md-inline">
+                              <hr class="border-top border-2 border-secondary opacity-50">
+                           </div>
+                           <div class="d-inline d-md-none opacity-50">
+                              <span class="text-secondary"><i class="fas fa-angle-right"></i></span>
+                           </div>
+                           <div class="col-auto px-2 text-center opacity-50">
+                              <span class="badge bg-secondary rounded-circle p-2 d-none d-md-inline">
+                              <i class="fas fa-check"></i>
+                              </span>
+                              <span class="ml-2 font-weight-bold text-secondary">Confirmation</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Hotel Item -->
+                  <div class="card card-theme mb-4">
+                     <div class="card-body">
+                        <div class="row">
+                           <div class="col-12 col-lg-9">
+                              <div class="row">
+                                 <div class="col-12 col-sm-4 col-md-2">
+                                    <div class="overflow-hidden rounded mb-1" style="background-image: url('https://www.infotechindex.com/ImageData/Hotel/mida_hotel_don_mueang_airport-general1.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 120px;">
+                                       <img src="/assets/images/image-ratio-4-3.gif" class="img-fluid invisible" style="width: 100%; height: auto;">
+                                    </div>
+                                 </div>
+                                 <div class="col-12 col-sm-8 col-md-10">
+                                    <div class="pb-2">
+                                       <span class="font-weight-bold text-theme">Mida Hotel Don Mueang Airport</span>
+                                       <span class="text-warning ml-2">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       </span>
+                                    </div>
+                                    <div class="pb-2 text-muted-theme">
+                                       <i class="fas fa-map-marker-alt"></i>
+                                       <span class="ml-2">99/401- 486, Chaeng Wattana 10 Road Laksi, 10210, Bangkok, Thailand</span>
+                                    </div>
+                                    <div class="pb-2">
+                                       <div>
+                                          <span class="font-weight-bold text-theme">Check-in : </span>
+                                          <span class="text-muted-theme">22 Apr 2025</span>
+                                       </div>
+                                       <div>
+                                          <span class="font-weight-bold text-theme">Check-out : </span>
+                                          <span class="text-muted-theme">23 Apr 2025</span>
+                                       </div>
+                                       <div>
+                                          <span class="font-weight-bold text-theme">Night(s) : </span>
+                                          <span class="text-muted-theme">1</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row border-top mt-3 pt-3">
+                                 <div class="col-12 col-md-4">
+                                    <div class="py-2 font-weight-bold text-theme">Room 1</div>
+                                    <div class="pb-0 font-weight-bold text-theme">
+                                       <i class="fas fa-user"></i>
+                                       <span class="ml-2">2 Adults, 0 Children</span>
+                                    </div>
+                                    <div class="pb-2 text-muted-theme">
+                                       <span>Request Double Bed</span>
+                                    </div>
+                                    <div class="pb-2 text-muted-theme">Room Only</div>
+                                 </div>
+                                 <div class="col-12 col-md-8">
+                                    <div class="py-2 font-weight-bold text-theme">Room Category</div>
+                                    <div class="pb-2">
+                                       <select class="form-control form-control-sm">
+                                          <option>SUPERIOR ROOM. - Room Only</option>
+                                          <option>DELUXE ROOM - Room Only</option>
+                                          <option>SUPERIOR ROOM. - Bed and Breakfast</option>
+                                          <option>JUNIOR SUITE - Room Only</option>
+                                          <option>DELUXE ROOM - Bed and Breakfast</option>
+                                          <option>FAMILY SUITE - Room Only</option>
+                                          <option>JUNIOR SUITE - Bed and Breakfast</option>
+                                          <option>FAMILY SUITE - Bed and Breakfast</option>
+                                       </select>
+                                    </div>
+                                    <div class="pb-2 text-muted-theme">
+                                       <span><i class="fas fa-bed"></i></span>
+                                       <span class="ml-2">AED 129.32</span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-12 col-lg-3 pt-4 pt-lg-0">
+                              <div class="pb-3">
+                                 <span class="btn btn-success btn-sm btn-block font-weight-bold">Available</span>
+                              </div>
+                              <div class="border-bottom card-theme p-2 mb-3 rounded">
+                                 <div class="text-center">
+                                    <span class="text-muted-theme small">From</span>
+                                 </div>
+                                 <div class="text-center">
+                                    <span class="font-weight-bold text-theme">AED</span>
+                                    <span class="font-weight-bold text-theme" style="font-size: 1.2rem;">129.32</span>
+                                 </div>
+                              </div>
+                              <div class="py-2 text-center">
+                                 <button type="button" class="btn btn-outline-danger btn-sm">
+                                 <i class="fas fa-trash-alt"></i>
+                                 <span class="ml-2">Remove from Basket</span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Add More Section -->
+                  <div class="row">
+                     <div class="col-12 col-md-7 col-lg-9">
+                        <div class="card card-theme">
+                           <div class="card-body">
+                              <div class="d-flex justify-content-center align-items-center">
+                                 <div class="col-auto text-center px-2">
+                                    <button class="btn btn-outline-theme py-2 px-3">
+                                       <div><i class="fas fa-hotel fa-lg"></i></div>
+                                       <div class="small">Add Hotel</div>
+                                    </button>
+                                 </div>
+                                 <div class="col-auto text-center px-2">
+                                    <button class="btn btn-outline-theme py-2 px-3">
+                                       <div><i class="fas fa-car fa-lg"></i></div>
+                                       <div class="small">Add Transfer</div>
+                                    </button>
+                                 </div>
+                                 <div class="col-auto text-center px-2">
+                                    <button class="btn btn-outline-theme py-2 px-3">
+                                       <div><i class="fas fa-running fa-lg"></i></div>
+                                       <div class="small">Add Activity</div>
+                                    </button>
+                                 </div>
+                                 <div class="col-auto text-center px-2">
+                                    <button class="btn btn-outline-theme py-2 px-3">
+                                       <div><i class="fas fa-ticket-alt fa-lg"></i></div>
+                                       <div class="small">Add Ticket</div>
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-md-5 col-lg-3 mt-3 mt-md-0">
+                        <div class="card bg-light-theme">
+                           <div class="card-body text-center">
+                              <div class="text-muted-theme small">Current Basket Total</div>
+                              <div class="pb-3">
+                                 <span class="font-weight-bold text-theme">AED</span>
+                                 <span class="font-weight-bold text-theme" style="font-size: 1.5rem;">129.32</span>
+                              </div>
+                              <div>
+                                 <button class="btn btn-primary btn-block font-weight-bold">Continue</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.container-fluid -->
+            </section>
+            <!-- /.content -->
+         </div>
+         <!-- /.content-wrapper -->
+         <!-- Control Sidebar -->
+         <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+         </aside>
+      </div>
+      <!-- ./wrapper -->
+      <!-- REQUIRED SCRIPTS -->
+      <!-- jQuery -->
+      <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+      <script src="dist/js/jquery/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <!-- <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+      <script src="dist/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- overlayScrollbars -->
+      <!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
+      <script src="dist/js/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="dist/js/adminlte.js"></script>
+      <script src="dist/js/chart.js/Chart.min.js"></script>
+      <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+      <script src="dist/js/pages/dashboard2.js"></script>
+      <!-- date-range-picker -->
+      <script src="/dist/plugins/daterangepicker/daterangepicker.js"></script>
+      <!-- bootstrap color picker -->
+      <script src="/dist/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+      <script src="dist/js/demo.js"></script>
+      <!-- slick slider -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   </body>
+</html>

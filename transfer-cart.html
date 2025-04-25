@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Basket | AdminLTE 3</title>
+
+ <!-- Google Font: Source Sans Pro -->
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+ <!-- Font Awesome Icons -->
+ <link rel="stylesheet" href="dist/css/fontawesome-free/css/all.min.css">
+  <!-- <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> -->
+ <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="dist/css/overlayScrollbars/css/OverlayScrollbars.min.css">
+ <!-- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> -->
+ <!-- Theme style -->
+ <link rel="stylesheet" href="dist/css/adminlte.min.css">
+ <!-- custom style -->
+  <link rel="stylesheet" href="/dist/css/customStyle.css">
+  <style>
+    .text-rating {
+      color: #ffc107;
+    }
+    .btn-available {
+      background-color: #28a745;
+    }
+    .btn-onrequest {
+      background-color: #ffc107;
+    }
+    .cart-item-image {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      padding-bottom: 75%; /* 4:3 aspect ratio */
+    }
+    .breadcrumb {
+      background-color: transparent;
+      padding: 0;
+    }
+    
+    /* Dark mode overrides */
+    .dark-mode .bg-white {
+      background-color: #343a40 !important;
+      color: #f8f9fa;
+    }
+    .dark-mode .bg-light {
+      background-color: #454d55 !important;
+      color: #f8f9fa;
+    }
+    .dark-mode .text-dark {
+      color: #f8f9fa !important;
+    }
+    .dark-mode .text-secondary {
+      color: #adb5bd !important;
+    }
+    .dark-mode .border, 
+    .dark-mode .border-top, 
+    .dark-mode .border-bottom {
+      border-color: #495057 !important;
+    }
+    .dark-mode .form-control, 
+    .dark-mode .form-select {
+      background-color: #454d55;
+      border-color: #495057;
+      color: #f8f9fa;
+    }
+  </style>
+</head>
+<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed tranfer-cart">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-dark">
+    <!-- Left navbar links -->
+     <div class="w-100">
+      <ul class="navbar-nav ml-auto w-75 d-flex align-items-center">
+    
+        <li class="nav-item d-none d-sm-inline-block">
+          <div class="logo">
+            <a href="#"><b>Trip</b>69</a>
+          </div>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="/hotel.html" class="nav-link">Hotels</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="/transfer.html" class="nav-link">Transfer</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="/activity.html" class="nav-link">Activity</a>
+        </li>
+      </ul>
+     </div>
+    
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <!-- Navbar Search -->
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">₹50,000</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Recharge</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+       <div class="user-panel d-flex mr-3">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Ram Sharma</a>
+        </div>
+      </div>
+      </li>
+      <li class="nav-item d-none d-sm-flex align-items-center" title="logout">
+        <a href="/login.html" class="d-sm-flex align-items-center">
+          <i class="fas fa-power-off"></i>
+          <!-- Logout -->
+        </a>
+      </li>
+
+     
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container">
+        <div class="row mb-2">
+          <div class=" col-4 col-sm-6">
+             <h1 class="m-0 text-theme my-basket">My Basket</h1>
+          </div>
+          <!-- /.col -->
+          <div class="col-8 col-sm-6">
+             <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="/transfer-detail.html" class="text-primary">Hotel Result</a></li>
+                <li class="breadcrumb-item active">My Basket</li>
+             </ol>
+          </div>
+          <!-- /.col -->
+       </div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container">
+        <!-- Booking Navigation -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-center align-items-center my-basket-cart-line">
+                  <div class="col-auto px-2 text-center">
+                     <span class="badge bg-primary rounded-circle p-2 d-none d-md-inline">
+                     <i class="fas fa-shopping-cart"></i>
+                     </span>
+                     <span class="ml-2 font-weight-bold text-primary">My Basket</span>
+                  </div>
+                  <div class="col-1 px-2 d-none d-md-inline">
+                     <hr class="border-top border-2 border-secondary opacity-50">
+                  </div>
+                  <div class="d-inline d-md-none">
+                     <span class="text-primary"><i class="fas fa-angle-right"></i></span>
+                  </div>
+                  <div class="col-auto px-2 text-center opacity-50">
+                     <span class="badge bg-secondary rounded-circle p-2 d-none d-md-inline">
+                     <i class="far fa-credit-card"></i>
+                     </span>
+                     <span class="ml-2 font-weight-bold text-secondary">Payment</span>
+                  </div>
+                  <div class="col-1 px-2 d-none d-md-inline">
+                     <hr class="border-top border-2 border-secondary opacity-50">
+                  </div>
+                  <div class="d-inline d-md-none opacity-50">
+                     <span class="text-secondary"><i class="fas fa-angle-right"></i></span>
+                  </div>
+                  <div class="col-auto px-2 text-center opacity-50">
+                     <span class="badge bg-secondary rounded-circle p-2 d-none d-md-inline">
+                     <i class="fas fa-check"></i>
+                     </span>
+                     <span class="ml-2 font-weight-bold text-secondary">Confirmation</span>
+                  </div>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hotel Item -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-lg-9">
+                    <div class="row">
+                      <div class="col-12 col-sm-4 col-md-2">
+                        <div class="overflow-hidden rounded mb-1" style="background-image: url('https://www.infotechindex.com/ImageData/Hotel/mida_hotel_don_mueang_airport-general1.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 120px;">
+                          <img src="/assets/images/image-ratio-4-3.gif" class="img-fluid invisible" style="width: 100%; height: auto;">
+                       </div>
+                      </div>
+                      <div class="col-12 col-sm-8 col-md-10">
+                        <div class="pb-2">
+                          <span class="fs-6 fw-bold text-dark pe-2"> Mida Hotel Don Mueang Airport </span>
+                          <span class="text-rating fs-8">
+                            <i class="fas fa-star fa"></i>
+                            <i class="fas fa-star fa"></i>
+                            <i class="fas fa-star fa"></i>
+                          </span>
+                        </div>
+                        <div class="pb-2 fs-7 text-secondary">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span class="ps-2">99/401- 486, Chaeng Wattana 10 Road Laksi, 10210, Bangkok, Thailand</span>
+                        </div>
+                        <div class="pb-2 fs-7">
+                          <div>
+                            <span class="text-dark fw-bold">Check-in : </span>
+                            <span class="text-secondary">22 Apr 2025</span>
+                          </div>
+                          <div>
+                            <span class="text-dark fw-bold">Check-out : </span>
+                            <span class="text-secondary">23 Apr 2025</span>
+                          </div>
+                          <div>
+                            <span class="text-dark fw-bold">Night(s) : </span>
+                            <span class="text-secondary">1</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row g-2 border-top mt-3">
+                      <div class="col-12 col-md-4">
+                        <div class="py-2 fs-6 fw-bold text-dark"> Room 1 </div>
+                        <div class="pb-0 fs-7 fw-bold text-dark">
+                          <i class="fas fa-user"></i>
+                          <span class="ps-2"> 2 Adults, 0 Children</span>
+                        </div>
+                        <div class="pb-2 fs-7 text-secondary">
+                          <span> Request Double Bed </span>
+                        </div>
+                        <div class="pb-2 fs-7 text-secondary"> Room Only </div>
+                      </div>
+                      <div class="col-12 col-md-8">
+                        <div class="py-2 fs-7 fw-bold text-dark"> Room Category </div>
+                        <div class="pb-2">
+                          <select class="form-control fs-7">
+                            <option value="####WSMA07092119####|RO|MA2401000023|0|0"> SUPERIOR ROOM. - Room Only </option>
+                            <option value="####WSMA150777056####|RO|MA2401000023|0|0"> DELUXE ROOM - Room Only </option>
+                            <option value="####WSMA07092119####|BABF|MA2401000023|0|0"> SUPERIOR ROOM. - Bed and Breakfast </option>
+                            <option value="####WSMA05110012####|RO|MA2401000023|0|0"> JUNIOR SUITE - Room Only </option>
+                            <option value="####WSMA150777056####|BABF|MA2401000023|0|0"> DELUXE ROOM - Bed and Breakfast </option>
+                            <option value="####WSMA06030205####|RO|MA2401000023|0|0"> FAMILY SUITE - Room Only </option>
+                            <option value="####WSMA05110012####|BABF|MA2401000023|0|0"> JUNIOR SUITE - Bed and Breakfast </option>
+                            <option value="####WSMA06030205####|BABF|MA2401000023|0|0"> FAMILY SUITE - Bed and Breakfast </option>
+                          </select>
+                        </div>
+                        <div class="pb-2 fs-7 text-secondary">
+                          <span><i class="fas fa-bed"></i></span>
+                          <span class="ps-2">AED</span>
+                          <span> 129.32 </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-3 pt-4 pt-lg-0">
+                    <div class="pb-3">
+                      <span class="btn btn-available py-2 fs-8 fw-bold w-100 text-white"> Available </span>
+                    </div>
+                    <div class="border-bottom bg-white p-2 mb-3 rounded">
+                      <div class="text-center">
+                        <span class="fs-7 text-secondary"> From </span>
+                      </div>
+                      <div class="text-center">
+                        <span class="fs-6 text-dark fw-bold"> AED </span>
+                        <span class="fs-5 text-dark fw-bold"> 129.32 </span>
+                      </div>
+                    </div>
+                    <div class="py-2 d-flex justify-content-center">
+                      <button type="button" class="btn text-danger p-0 fs-8 shadow-none">
+                        <i class="fas fa-trash-alt"></i>
+                        <span class="ps-2">Remove from Basket</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transfer Item -->
+        <div class="row mb-4">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12 col-lg-9">
+                    <div class="row">
+                      <div class="col-12 col-sm-4 col-md-2">
+                        <div class="overflow-hidden rounded mb-1" style="background-image: url('https://manage.tpb2b.com//ImageData/Craft/standard-7-seater-regular-model--dm23070002.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 120px;">
+                          <img src="/assets/images/image-ratio-4-3.gif" class="img-fluid invisible" style="width: 100%; height: auto;">
+                       </div>
+                      </div>
+                      <div class="col-12 col-sm-8 col-md-10">
+                        <div class="pb-2">
+                          <span class="fs-6 fw-bold text-dark pe-2"> Arrival From Dubai Airport to Dubai Zone 1 </span>
+                        </div>
+                        <div class="pb-2 fs-7">
+                          <div>
+                            <span class="text-dark fw-bold">Service date : </span>
+                            <span class="text-secondary">23 Apr 2025</span>
+                          </div>
+                          <div>
+                            <span class="text-dark fw-bold">Passenger : </span>
+                            <span class="text-secondary"> 2 Adults </span>
+                          </div>
+                          <div>
+                            <span class="text-dark fw-bold">Pick-up : </span>
+                            <span class="text-secondary"> Dubai, Airport, Dubai International Airport </span>
+                          </div>
+                          <div>
+                            <span class="text-dark fw-bold">Drop Off : </span>
+                            <span class="text-secondary"> Dubai, City, Dubai Zone 1 </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-3 pt-4 pt-lg-0">
+                    <div class="pb-3">
+                      <span class="btn py-2 fs-8 fw-bold w-100 text-white btn-onrequest"> On Request </span>
+                    </div>
+                    <div class="border-bottom bg-white p-2 mb-3 rounded">
+                      <div class="text-center">
+                        <span class="fs-7 text-secondary"> From </span>
+                      </div>
+                      <div class="text-center">
+                        <span class="fs-6 text-dark fw-bold"> AED </span>
+                        <span class="fs-5 text-dark fw-bold"> 81.00 </span>
+                      </div>
+                    </div>
+                    <div class="py-2 d-flex justify-content-center">
+                      <button type="button" class="btn text-danger p-0 fs-8 shadow-none">
+                        <i class="fas fa-trash-alt"></i>
+                        <span class="ps-2">Remove from Basket</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add More and Summary -->
+         <div class="row">
+          <div class="col-12 col-md-7 col-lg-9">
+             <div class="card card-theme">
+                <div class="card-body">
+                   <div class="d-flex justify-content-center align-items-center">
+                      <div class="col-auto text-center px-2">
+                         <button class="btn btn-outline-theme py-2 px-3">
+                            <div><i class="fas fa-hotel fa-lg"></i></div>
+                            <div class="small">Add Hotel</div>
+                         </button>
+                      </div>
+                      <div class="col-auto text-center px-2">
+                         <button class="btn btn-outline-theme py-2 px-3">
+                            <div><i class="fas fa-car fa-lg"></i></div>
+                            <div class="small">Add Transfer</div>
+                         </button>
+                      </div>
+                      <div class="col-auto text-center px-2">
+                         <button class="btn btn-outline-theme py-2 px-3">
+                            <div><i class="fas fa-running fa-lg"></i></div>
+                            <div class="small">Add Activity</div>
+                         </button>
+                      </div>
+                      <div class="col-auto text-center px-2">
+                         <button class="btn btn-outline-theme py-2 px-3">
+                            <div><i class="fas fa-ticket-alt fa-lg"></i></div>
+                            <div class="small">Add Ticket</div>
+                         </button>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-12 col-md-5 col-lg-3 mt-3 mt-md-0">
+             <div class="card bg-light-theme transfer-current-basket">
+                <div class="card-body text-center">
+                   <div class="text-muted-theme small">Current Basket Total</div>
+                   <div class="pb-3">
+                      <span class="font-weight-bold text-theme">AED</span>
+                      <span class="font-weight-bold text-theme" style="font-size: 1.5rem;">129.32</span>
+                   </div>
+                   <div>
+                      <button class="btn btn-primary btn-block font-weight-bold">Continue</button>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+   <!-- Control Sidebar -->
+   <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
+
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+<script src="dist/js/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap -->
+<!-- <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<script src="dist/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- overlayScrollbars -->
+<!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
+<script src="dist/js/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+
+<!-- PAGE PLUGINS -->
+<!-- jQuery Mapael -->
+<!-- <script src="plugins/jquery-mousewheel/jquery.mousewheel.js"></script> -->
+<script src="dist/js/jquery-mousewheel/jquery.mousewheel.js"></script>
+
+<!-- <script src="plugins/raphael/raphael.min.js"></script> -->
+<script src="dist/js/raphael/raphael.min.js"></script>
+
+<!-- <script src="plugins/jquery-mapael/jquery.mapael.min.js"></script> -->
+<script src="dist/js/jquery-mapael/jquery.mapael.min.js"></script>
+
+<!-- <script src="plugins/jquery-mapael/maps/usa_states.min.js"></script> -->
+<script src="dist/js/jquery-mapael/maps/usa_states.min.js"></script>
+
+<!-- ChartJS -->
+<!-- <script src="plugins/chart.js/Chart.min.js"></script> -->
+<script src="dist/js/chart.js/Chart.min.js"></script>
+
+
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard2.js"></script>
+</body>
+</html>

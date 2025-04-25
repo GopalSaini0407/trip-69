@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Trip 69</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+      <!-- Leaflet CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+      <!-- Leaflet JS -->
+      <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+      <!-- Ion Slider -->
+      <link rel="stylesheet" href="/dist/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+      <!-- bootstrap slider -->
+      <link rel="stylesheet" href="/dist/plugins/bootstrap-slider/css/bootstrap-slider.min.css">
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="dist/css/fontawesome-free/css/all.min.css">
+      <!-- <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> -->
+      <!-- overlayScrollbars -->
+      <link rel="stylesheet" href="dist/css/overlayScrollbars/css/OverlayScrollbars.min.css">
+      <!-- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> -->
+      <!-- Theme style -->
+      <link rel="stylesheet" href="dist/css/adminlte.min.css">
+      <!-- custom style -->
+      <link rel="stylesheet" href="/dist/css/customStyle.css">
+   </head>
+   <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed hotel-details">
+      <div class="wrapper">
+         <!-- Navbar -->
+         <nav class="main-header navbar navbar-expand navbar-dark">
+            <!-- Left navbar links -->
+            <div class="w-100">
+               <ul class="navbar-nav ml-auto w-75 d-flex align-items-center">
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <div class="logo">
+                        <a href="#"><b>Trip</b>69</a>
+                     </div>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block active">
+                     <a href="/hotel.html" class="nav-link">Hotels</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <a href="/transfer.html" class="nav-link">Transfer</a>
+                  </li>
+                  <li class="nav-item d-none d-sm-inline-block">
+                     <a href="/activity.html" class="nav-link">Activity</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+               <!-- Navbar Search -->
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="#" class="nav-link">₹50,000</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="#" class="nav-link">Recharge</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <div class="user-panel d-flex mr-3">
+                     <div class="image">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                     </div>
+                     <div class="info">
+                        <a href="#" class="d-block">Ram Sharma</a>
+                     </div>
+                  </div>
+               </li>
+               <li class="nav-item d-none d-sm-flex align-items-center" title="logout">
+                  <a href="/login.html" class="d-sm-flex align-items-center">
+                     <i class="fas fa-power-off"></i>
+                     <!-- Logout -->
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                  <i class="fas fa-th-large"></i>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <!-- /.navbar -->
+         <!-- Content Wrapper. Contains page content -->
+         <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header p-0">
+               <div class="container-fluid p-0">
+                  <div class="position-relative" style="min-height: 700px; border-radius: 0 0 10px 10px; overflow: hidden;">
+                     <!-- Background Image -->
+                     <div class="w-100 h-100 position-absolute top-0 start-0" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;"></div>
+                     <!-- Dark Overlay -->
+                     <div class="position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+                     <!-- Tabs -->
+                     <div class="card card-primary card-tabs position-absolute w-75" style="top: 50%; left: 50%; transform: translate(-50%,-50%);">
+                        <div class="card-body">
+                           <div class="tab-content" id="custom-tabs-one-tabContent">
+                              <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                                 <form>
+                                    <!-- <div class="section-title">Search Hotel</div> -->
+                                    <div class="row">
+                                       <div class="col-md-4">
+                                          <label>Country</label>
+                                          <div class="d-flex rounded" style="border: 1px solid grey;">
+                                             <div class="nav-item dropdown border-right">
+                                                <a class="nav-link  text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-passport"></i>
+                                                </a>
+                                                <div class="dropdown-menu mt-0">
+                                                   <a class="dropdown-item" href="#" data-widget="iframe-close" data-type="all">Pax Passport</a>
+                                                   <a class="dropdown-item" href="#" data-widget="iframe-close" data-type="all-other">Residential</a>
+                                                </div>
+                                             </div>
+                                             <input type="text" class="form-control rounded-0 border-0" name="Country" list="country" placeholder="Enter Pax Passport" required>
+                                             <datalist id="country">
+                                                <option value="India"></option>
+                                                <option value="Nepal"></option>
+                                                <option value="China"></option>
+                                                <option value="Bhutan"></option>
+                                             </datalist>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-4">
+                                          <label>City</label>
+                                          <div class="d-flex rounded" style="border: 1px solid grey;">
+                                             <div class="nav-item dropdown border-right">
+                                                <a class="nav-link text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-marker-alt"></i>
+                                                </a>
+                                             </div>
+                                             <input type="text" class="form-control rounded-0 border-0" name="City" list="city" placeholder="Enter a destination city" required>
+                                             <datalist id="city">
+                                                <option value="New Delhi"></option>
+                                                <option value="Jammu and Kashmir"></option>
+                                                <option value="Haryana"></option>
+                                             </datalist>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-4">
+                                          <div class="form-group">
+                                             <label>Check In & Check Out</label>
+                                             <div class="d-flex border rounded">
+                                                <span class="input-group-text rounded-0">
+                                                <i class="far fa-calendar-alt"></i>
+                                                </span>
+                                                <!-- Check-in -->
+                                                <div class="input-group date" id="checkin-date" data-target-input="nearest">
+                                                   <div class="input-group-prepend w-100">
+                                                      <button class="btn w-100 h-100 fs-7 rounded-0 rounded-start py-1 shadow-none" data-target="#checkin-date" data-toggle="datetimepicker">
+                                                         <!-- <span class="text-secondary d-block d-sm-inline">Check-in:</span><br> -->
+                                                         <span id="checkin-label" class="text-white fw-bold">--</span>
+                                                      </button>
+                                                   </div>
+                                                </div>
+                                                <!-- Number of Nights -->
+                                                <div class="text-center border-start border-end d-flex flex-column justify-content-center">
+                                                   <span class="d-block text-grey fw-bold" id="night-count">0</span>
+                                                   <span class="d-block text-secondary fs-9">Night(s)</span>
+                                                </div>
+                                                <!-- Check-out -->
+                                                <div class="input-group date" id="checkout-date" data-target-input="nearest">
+                                                   <div class="input-group-append w-100">
+                                                      <button class="btn w-100 h-100 fs-7 rounded-0 rounded-end py-1 shadow-none" data-target="#checkout-date" data-toggle="datetimepicker">
+                                                         <!-- <span class="text-secondary d-block d-sm-inline">Check-out:</span><br> -->
+                                                         <span id="checkout-label" class="text-white fw-bold">--</span>
+                                                      </button>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="row d-flex align-items-center">
+                                       <div class="col-md-4">
+                                          <div class="form-group">
+                                             <label>No. Of Members</label>
+                                             <button id="roomBtn" class="btn w-100 p-0 py-2 fs-7 text-muted fw-bold text-start d-flex" style="border: 1px solid grey;">
+                                             <span class="px-2 text-secondary"><i class="fas fa-user-friends"></i></span>
+                                             <span class="d-none d-lg-inline" id="roomInfo">1 Room,</span>
+                                             <span id="guestInfo">2 Adults 0 Children</span>
+                                             </button>
+                                             <div id="roomPanel"
+                                                class="card border-muted shadow-sm"
+                                                style="display: none; position: absolute; z-index: 1050; width: 310px;">
+                                                <div class="card-body p-3">
+                                                   <!-- Room Selector -->
+                                                   <div class="row g-2 mb-3 align-items-center">
+                                                      <div class="col-6">
+                                                         <label for="roomSelect" class="mb-0 fw-semibold text-grey">Room</label>
+                                                      </div>
+                                                      <div class="col-6">
+                                                         <select id="roomSelect" class="form-select form-select-sm">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+                                                   <!-- Guest Selector -->
+                                                   <div class="row g-2">
+                                                      <div class="col-3">
+                                                         <label for="adultSelect" class="form-label text-muted small">Adults</label>
+                                                         <select id="adultSelect" class="form-select form-select-sm">
+                                                            <option value="1">1</option>
+                                                            <option value="2" selected>2</option>
+                                                            <option value="3">3</option>
+                                                         </select>
+                                                      </div>
+                                                      <div class="col-3">
+                                                         <label for="childSelect" class="form-label text-muted small">Children</label>
+                                                         <select id="childSelect" class="form-select form-select-sm">
+                                                            <option value="0">0</option>
+                                                            <option value="1" selected>1</option>
+                                                            <option value="2">2</option>
+                                                         </select>
+                                                      </div>
+                                                      <div class="col-3">
+                                                         <label for="bedTypeSelect" class="form-label text-muted small">Bed Type</label>
+                                                         <select id="bedTypeSelect" class="form-select form-select-sm">
+                                                            <option>Double</option>
+                                                            <option>Twin</option>
+                                                         </select>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-md-2 mt-3 ">
+                                          <button type="submit" class="btn btn-primary btn-block">Search</button>
+                                       </div>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <div class="content-wrapper">
+               <div class="container">
+                  <div class="content-header">
+                     <div class="container-fluid">
+                        <div class="row mb-2">
+                           <div class="col-5 col-md-6">
+                              <h1 class="m-0 text-theme hotel-detail-breadcrumb">Hotel Details</h1>
+                           </div>
+                           <!-- /.col -->
+                           <div class="col-7 col-md-6">
+                              <ol class="breadcrumb float-sm-right">
+                                 <li class="breadcrumb-item"><a href="hotel.html" class="text-primary">Home</a></li>
+                                 <li class="breadcrumb-item active">Hotel Details</li>
+                              </ol>
+                           </div>
+                           <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                     </div>
+                     <!-- /.container-fluid -->
+                  </div>
+                  <!-- /.content-header -->
+                  <!-- Main content -->
+                  <section class="content">
+                     <div class="container-fluid">
+                        <!-- Hotel Header -->
+                        <div class="card card-theme mb-4 hotel-details-box">
+                           <div class="card-body">
+                              <div class="row">
+                                 <div class="col-12 col-md-9 col-lg-10 pb-4">
+                                    <div class="pb-2">
+                                       <span class="h3 font-weight-bold text-theme mr-2 hotel-details-heading">Barcelo Al Jaddaf Hotel</span>
+                                       <span class="text-warning">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       </span>
+                                    </div>
+                                    <div class="pb-3">
+                                       <div class="text-muted-theme">
+                                          <i class="fas fa-map-marker-alt"></i>
+                                          <span class="px-2">326 Al Khail Rd - Al Jaddaf - Dubai, 384694, Dubai, United Arab Emirates</span>
+                                          <a href="javascript:void(0)" class="text-primary text-nowrap">View On Map</a>
+                                       </div>
+                                    </div>
+                                    <table cellpadding="0" border="0">
+                                       <tr valign="top">
+                                          <td>
+                                             <div class="pb-1 small font-weight-bold text-theme pr-4 text-nowrap">Tel No</div>
+                                          </td>
+                                          <td>
+                                             <div class="pb-1 small text-muted-theme">97145969999</div>
+                                          </td>
+                                       </tr>
+                                       <tr valign="top">
+                                          <td>
+                                             <div class="pb-1 small font-weight-bold text-theme pr-4 text-nowrap">Website</div>
+                                          </td>
+                                          <td>
+                                             <div class="pb-1 small">
+                                                <a target="_blank" class="text-primary text-break" href="https://www.barcelo.com/en-gb/occidental-al-jaddaf/?utm_source=google&amp;utm_medium=organic&amp;utm_campaig">
+                                                https://www.barcelo.com/en-gb/occidental-al-jaddaf/?utm_source=google&amp;utm_medium=organic&amp;utm_campaig
+                                                </a>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </table>
+                                 </div>
+                                 <div class="col-12 col-md-3 col-lg-2">
+                                    <div class="row align-items-end">
+                                       <div class="col-6 col-md-12">
+                                          <div class="pb-md-3 text-md-center">
+                                             <img class="img-fluid" src="https://manage.tpb2b.com/ImageData/Hotel/occidental_al_jaddaf-logo.png">
+                                          </div>
+                                       </div>
+                                       <div class="col-6 col-md-12">
+                                          <div class="btn btn-sm font-weight-bold py-2 btn-onrequest w-100 text-white">
+                                             <i class="fas fa-hourglass-start"></i>
+                                             <span class="ml-2">On Request</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Hotel Gallery -->
+                        <div class="card card-theme mb-4">
+                           <div class="card-body">
+                              <div class="row">
+                                 <div class="col-12 col-md-6 mb-3 mb-md-0">
+                                    <div class="h-100 rounded" style="cursor: pointer; background-color: #d7d7d7; background-image: url('https://manage.tpb2b.com/ImageData/Hotel/barcelo_al_jaddaf_hotel-general1.jpg?id=1.7013734609745412'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 300px;">
+                                       <img src="/assets/images/image-ratio-16-9.gif" class="w-100 invisible">
+                                    </div>
+                                 </div>
+                                 <div class="col-12 col-md-6">
+                                    <div class="row">
+                                       <div class="col-3 col-md-6 mb-2">
+                                          <div class="rounded" style="cursor: pointer; background-color: #d7d7d7; background-image: url('https://manage.tpb2b.com/ImageData/Hotel/barcelo_al_jaddaf_hotel-general2.jpg?id=5.717221496747836'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 140px;">
+                                             <img src="/assets/images/image-ratio-4-3.gif" class="w-100 invisible">
+                                          </div>
+                                       </div>
+                                       <div class="col-3 col-md-6 mb-2">
+                                          <div class="rounded" style="cursor: pointer; background-color: #d7d7d7; background-image: url('https://manage.tpb2b.com/ImageData/Hotel/barcelo_al_jaddaf_hotel-general3.jpg?id=1.5778643885784038'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 140px;">
+                                             <img src="/assets/images/image-ratio-4-3.gif" class="w-100 invisible">
+                                          </div>
+                                       </div>
+                                       <div class="col-3 col-md-6 mb-2">
+                                          <div class="rounded" style="cursor: pointer; background-color: #d7d7d7; background-image: url('https://manage.tpb2b.com/ImageData/Hotel/barcelo_al_jaddaf_hotel-general4.jpg?id=0.32309417226131454'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 140px;">
+                                             <img src="/assets/images/image-ratio-4-3.gif" class="w-100 invisible">
+                                          </div>
+                                       </div>
+                                       <div class="col-3 col-md-6 mb-2">
+                                          <div class="rounded position-relative" style="cursor: pointer; background-color: #d7d7d7; background-image: url('https://manage.tpb2b.com/ImageData/Hotel/barcelo_al_jaddaf_hotel-general5.jpg?id=0.6991272619214794'); background-repeat: no-repeat; background-position: center center; background-size: cover; height: 140px;">
+                                             <img src="/assets/images/image-ratio-4-3.gif" class="w-100 invisible">
+                                             <div class="position-absolute w-100 h-100 start-0 top-0 d-flex justify-content-center align-items-center rounded" style="background-color: rgba(0, 0, 0, 0.5);">
+                                                <div class="small text-white">See All 15 Photos</div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Hotel Info Alert -->
+                        <div class="alert alert-warning alert-theme mb-4">
+                           <div class="d-flex flex-wrap justify-content-center">
+                              <div class="col-12 col-sm-6 col-md-3 col-lg-auto px-lg-3 text-lg-center">
+                                 <div class="small font-weight-bold">Chain: Barcelo</div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 col-lg-auto px-lg-3 text-lg-center">
+                                 <div class="small font-weight-bold">Style: City Hotel</div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 col-lg-auto px-lg-3 text-lg-center">
+                                 <div class="small font-weight-bold">Location: City</div>
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-3 col-lg-auto px-lg-3 text-lg-center">
+                                 <div class="small font-weight-bold">Total Room: 365</div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Facilities -->
+                        <div class="card card-theme mb-4">
+                           <div class="card-body">
+                              <div class="row">
+                                 <div class="col-12 col-md-9">
+                                    <div class="row py-2">
+                                       <div class="pb-2 col-6 col-lg-4 col-xl-auto small">
+                                          <div>
+                                             <span class="text-theme"><i class="fas fa-wifi"></i></span>
+                                             <span class="px-2 text-muted-theme">WIFI</span>
+                                          </div>
+                                       </div>
+                                       <div class="pb-2 col-6 col-lg-4 col-xl-auto small opacity-25">
+                                          <div>
+                                             <span class="text-theme"><i class="fas fa-swimming-pool"></i></span>
+                                             <span class="px-2 text-muted-theme">Swimming Pool</span>
+                                          </div>
+                                       </div>
+                                       <div class="pb-2 col-6 col-lg-4 col-xl-auto small">
+                                          <div>
+                                             <span class="text-theme"><i class="fas fa-dumbbell"></i></span>
+                                             <span class="px-2 text-muted-theme">Fitness</span>
+                                          </div>
+                                       </div>
+                                       <div class="pb-2 col-6 col-lg-4 col-xl-auto small">
+                                          <div>
+                                             <span class="text-theme"><i class="fas fa-utensils"></i></span>
+                                             <span class="px-2 text-muted-theme">Restaurant</span>
+                                          </div>
+                                       </div>
+                                       <div class="pb-2 col-6 col-lg-4 col-xl-auto small">
+                                          <div>
+                                             <span class="text-theme"><i class="fas fa-car"></i></span>
+                                             <span class="px-2 text-muted-theme">Parking</span>
+                                          </div>
+                                       </div>
+                                       <div class="pb-2 col-6 col-lg-4 col-xl-auto small">
+                                          <div>
+                                             <span class="text-theme"><i class="fas fa-tshirt"></i></span>
+                                             <span class="px-2 text-muted-theme">Laundry</span>
+                                          </div>
+                                       </div>
+                                       <div class="pb-2 col-6 col-lg-4 col-xl-auto small">
+                                          <div>
+                                             <span class="text-theme"><i class="fas fa-concierge-bell"></i></span>
+                                             <span class="px-2 text-muted-theme">Room Service</span>
+                                          </div>
+                                       </div>
+                                       <div class="pb-2 col-6 col-lg-4 col-xl-auto small">
+                                          <div>
+                                             <span class="text-theme"><i class="fas fa-spa"></i></span>
+                                             <span class="px-2 text-muted-theme">Spa</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-12 col-md-3">
+                                    <button class="btn btn-secondary py-2 small w-100">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <span class="ml-2 font-weight-bold">See Map</span>
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card card-primary card-outline">
+                           <div class="card-header">
+                              <h3 class="card-title">Room Rates</h3>
+                              <div class="card-tools">
+                                 <span class="badge badge-warning">Total room category at this property: 15</span>
+                              </div>
+                           </div>
+                           <div class="card-body p-0">
+                              <div class="table-responsive">
+                                 <table class="table table-hover">
+                                    <thead class="d-none d-md-table-header-group">
+                                       <tr>
+                                          <th>Room Category</th>
+                                          <th>Meal Type</th>
+                                          <th>Cancellation Policy</th>
+                                          <th>Total Price</th>
+                                          <th>Action</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <!-- Room Rate 1 -->
+                                       <tr class="room-rate">
+                                          <td>
+                                             <strong class="text-primary">SUPERIOR KING</strong>
+                                          </td>
+                                          <td>Room Only</td>
+                                          <td>
+                                             <a href="javascript:void(0);" class="text-danger">
+                                             <i class="fas fa-info-circle"></i> View Policy
+                                             </a>
+                                          </td>
+                                          <td>
+                                             <strong class="text-primary">AED 362.11</strong>
+                                          </td>
+                                          <td>
+                                             <button class="btn btn-success btn-sm">Room Available</button>
+                                             <div class="text-center mt-1">
+                                                <a href="#" class="text-muted small">Daily Rates</a>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <!-- Room Rate 2 -->
+                                       <tr class="room-rate">
+                                          <td>
+                                             <strong class="text-primary">SUPERIOR TWIN</strong>
+                                          </td>
+                                          <td>Room Only</td>
+                                          <td>
+                                             <a href="javascript:void(0);" class="text-danger">
+                                             <i class="fas fa-info-circle"></i> View Policy
+                                             </a>
+                                          </td>
+                                          <td>
+                                             <strong class="text-primary">AED 362.11</strong>
+                                          </td>
+                                          <td>
+                                             <button class="btn btn-success btn-sm">Room Available</button>
+                                             <div class="text-center mt-1">
+                                                <a href="#" class="text-muted small">Daily Rates</a>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <!-- Room Rate 3 -->
+                                       <tr class="room-rate">
+                                          <td>
+                                             <strong class="text-primary">DELUXE TWIN</strong>
+                                          </td>
+                                          <td>Room Only</td>
+                                          <td>
+                                             <a href="javascript:void(0);" class="text-danger">
+                                             <i class="fas fa-info-circle"></i> View Policy
+                                             </a>
+                                          </td>
+                                          <td>
+                                             <strong class="text-primary">AED 385.22</strong>
+                                          </td>
+                                          <td>
+                                             <button class="btn btn-success btn-sm">Room Available</button>
+                                             <div class="text-center mt-1">
+                                                <a href="#" class="text-muted small">Daily Rates</a>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <!-- Room Rate 4 -->
+                                       <tr class="room-rate">
+                                          <td>
+                                             <strong class="text-primary">SUPERIOR TWIN</strong>
+                                          </td>
+                                          <td>Breakfast</td>
+                                          <td>
+                                             <a href="javascript:void(0);" class="text-danger">
+                                             <i class="fas fa-info-circle"></i> View Policy
+                                             </a>
+                                          </td>
+                                          <td>
+                                             <strong class="text-primary">AED 430.48</strong>
+                                          </td>
+                                          <td>
+                                             <button class="btn btn-success btn-sm">Room Available</button>
+                                             <div class="text-center mt-1">
+                                                <a href="#" class="text-muted small">Daily Rates</a>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                       <!-- Room Rate 5 -->
+                                       <tr>
+                                          <td>
+                                             <strong class="text-primary">SUPERIOR KING</strong>
+                                          </td>
+                                          <td>Breakfast</td>
+                                          <td>
+                                             <a href="javascript:void(0);" class="text-danger">
+                                             <i class="fas fa-info-circle"></i> View Policy
+                                             </a>
+                                          </td>
+                                          <td>
+                                             <strong class="text-primary">AED 430.48</strong>
+                                          </td>
+                                          <td>
+                                             <button class="btn btn-success btn-sm">Room Available</button>
+                                             <div class="text-center mt-1">
+                                                <a href="#" class="text-muted small">Daily Rates</a>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                              <div class="card-footer text-center">
+                                 <button class="btn btn-outline-primary">Load all</button>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Hotel Details Sections -->
+                        <div class="card card-theme mb-4">
+                           <div class="card-body">
+                              <div class="py-4 border-top border-dark-theme border-2">
+                                 <div class="row">
+                                    <div class="pb-1 col-12 col-lg-3 col-xl-2">
+                                       <div class="text-theme font-weight-bold">Hotel Description</div>
+                                    </div>
+                                    <div class="pb-4 col-12 col-lg-9 col-xl-10">
+                                       <div class="text-muted-theme">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque accusantium nisi aperiam quaerat maxime! Esse perferendis maxime quos. Dolores tempore eveniet accusantium aut, rem optio minus praesentium illum nemo recusandae magni saepe, deserunt tempora totam soluta distinctio, alias impedit ipsum quidem quas voluptates placeat. Enim veniam tempore velit a reprehenderit quas omnis architecto eveniet corporis similique numquam sapiente at, quasi iste fuga ratione est esse sed. Cupiditate placeat iste, omnis iure exercitationem iusto perspiciatis. Quia nobis inventore repellat blanditiis ducimus, quibusdam error corrupti veniam est cum accusamus temporibus aliquam corporis at! Doloribus doloremque eius quasi! Debitis officiis voluptatem itaque cupiditate.</div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="pb-1 col-12 col-lg-3 col-xl-2">
+                                       <div class="text-theme font-weight-bold">Room Information</div>
+                                    </div>
+                                    <div class="pb-4 col-12 col-lg-9 col-xl-10">
+                                       <div class="text-muted-theme">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quasi, mollitia blanditiis et at perspiciatis vero voluptatibus, magni molestias neque beatae! Autem expedita quam illum fugiat alias odio beatae! Rerum eius tenetur animi expedita, neque quaerat, porro ratione maxime nam facilis eveniet mollitia facere placeat tempora similique explicabo perferendis, dolorum non consequatur eum? Ea quisquam dolorem molestiae error repellat voluptatum illo quos accusantium architecto odit est necessitatibus rem laboriosam autem blanditiis officiis dolore reiciendis harum, vel facere ut id. Molestiae id voluptates ex ipsam omnis repudiandae, ipsum fugiat non illum. Eligendi quam ad veritatis reprehenderit officia tenetur suscipit error rem?</div>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="pb-1 col-12 col-lg-3 col-xl-2">
+                                       <div class="text-theme font-weight-bold">Facilities</div>
+                                    </div>
+                                    <div class="pb-4 col-12 col-lg-9 col-xl-10">
+                                       <div class="row">
+                                          <div class="pb-3 col-12 col-sm-6 col-md-4 col-xl-3">
+                                             <div class="pb-2 text-theme small font-weight-bold">Dining/Entertainment</div>
+                                             <div class="text-muted-theme small">Restaurant</div>
+                                             <div class="text-muted-theme small">Bar Lounge</div>
+                                             <div class="text-muted-theme small">Disco</div>
+                                             <div class="text-muted-theme small">Café</div>
+                                          </div>
+                                          <div class="pb-3 col-12 col-sm-6 col-md-4 col-xl-3">
+                                             <div class="pb-2 text-theme small font-weight-bold">Room Facilities</div>
+                                             <div class="text-muted-theme small">TV</div>
+                                             <div class="text-muted-theme small">Hairdryer</div>
+                                             <div class="text-muted-theme small">Wifi</div>
+                                             <div class="text-muted-theme small">24 Hrs. Room Service</div>
+                                             <div class="text-muted-theme small">Non Smoking Room</div>
+                                             <div class="text-muted-theme small">Babycot</div>
+                                             <div class="text-muted-theme small">Minibar</div>
+                                             <div class="text-muted-theme small">Air-condition</div>
+                                             <div class="text-muted-theme small">Wired Internet</div>
+                                          </div>
+                                          <div class="pb-3 col-12 col-sm-6 col-md-4 col-xl-3">
+                                             <div class="pb-2 text-theme small font-weight-bold">Hotel Facilities</div>
+                                             <div class="text-muted-theme small">Newspaper</div>
+                                             <div class="text-muted-theme small">Parking</div>
+                                             <div class="text-muted-theme small">Elevator</div>
+                                             <div class="text-muted-theme small">Safe Deposit Box</div>
+                                             <div class="text-muted-theme small">Beauty Salon</div>
+                                             <div class="text-muted-theme small">Bellboy</div>
+                                             <div class="text-muted-theme small">Multilingual</div>
+                                             <div class="text-muted-theme small">Smoking area</div>
+                                          </div>
+                                          <div class="pb-3 col-12 col-sm-6 col-md-4 col-xl-3">
+                                             <div class="pb-2 text-theme small font-weight-bold">Services</div>
+                                             <div class="text-muted-theme small">Room Service</div>
+                                             <div class="text-muted-theme small">Laundry</div>
+                                             <div class="text-muted-theme small">Money Exchange</div>
+                                          </div>
+                                          <div class="pb-3 col-12 col-sm-6 col-md-4 col-xl-3">
+                                             <div class="pb-2 text-theme small font-weight-bold">Recreational Facilities</div>
+                                             <div class="text-muted-theme small">Sauna</div>
+                                             <div class="text-muted-theme small">Spa</div>
+                                             <div class="text-muted-theme small">Fitness</div>
+                                          </div>
+                                          <div class="pb-3 col-12 col-sm-6 col-md-4 col-xl-3">
+                                             <div class="pb-2 text-theme small font-weight-bold">Business Facilities</div>
+                                             <div class="text-muted-theme small">Meeting Rooms</div>
+                                             <div class="text-muted-theme small">Internet Service</div>
+                                             <div class="text-muted-theme small">Banquet</div>
+                                             <div class="text-muted-theme small">Business Center</div>
+                                          </div>
+                                          <div class="pb-3 col-12 col-sm-6 col-md-4 col-xl-3">
+                                             <div class="pb-2 text-theme small font-weight-bold">Hotel Service</div>
+                                             <div class="text-muted-theme small">24 Hour Security</div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- /.container-fluid -->
+                  </section>
+                  <!-- /.content -->
+               </div>
+               <!-- /.content-wrapper -->
+               <div class="wrapper">
+                  <!-- Content Wrapper. Contains page content -->
+                  <div class="content-wrapper">
+                     <!-- Main content -->
+                     <section class="content">
+                        <div class="container-fluid">
+                           <div class="bg-light-theme">
+                              <div class="container">
+                                 <div class="row">
+                                    <div class="pb-1 col-12 col-lg-3 col-xl-2">
+                                       <div class="text-theme font-weight-bold">Email Information</div>
+                                    </div>
+                                    <div class="pb-4 col-12 col-lg-9 col-xl-10">
+                                       <div class="d-flex flex-wrap">
+                                          <div class="col-12 col-lg-6">
+                                             <div class="w-100">
+                                                <div class="text-theme small pb-1">Email Address</div>
+                                                <div class="pb-3">
+                                                   <input type="text" class="form-control w-100" placeholder="Enter email address">
+                                                </div>
+                                             </div>
+                                             <div class="w-100">
+                                                <div class="text-theme small pb-1">Description</div>
+                                                <div class="pb-3">
+                                                   <textarea class="form-control w-100" rows="5" placeholder="Enter description"></textarea>
+                                                </div>
+                                             </div>
+                                             <div class="w-100">
+                                                <button type="button" class="btn btn-primary font-weight-bold px-5">Send</button>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- /.container-fluid -->
+                     </section>
+                     <!-- /.content -->
+                  </div>
+                  <!-- /.content-wrapper -->
+               </div>
+            </div>
+         </div>
+         <!-- Control Sidebar -->
+         <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+         </aside>
+         <!-- /.control-sidebar -->
+         <!-- Main Footer -->
+         <footer class="main-footer">
+            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+               <b>Version</b> 3.1.0
+            </div>
+         </footer>
+      </div>
+      <!-- REQUIRED SCRIPTS -->
+      <!-- jQuery -->
+      <!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+      <script src="dist/js/jquery/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <!-- <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+      <script src="dist/js/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- overlayScrollbars -->
+      <!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
+      <script src="dist/js/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="dist/js/adminlte.js"></script>
+      <script src="dist/js/chart.js/Chart.min.js"></script>
+      <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+      <script src="dist/js/pages/dashboard2.js"></script>
+      <!-- date-range-picker -->
+      <script src="/dist/plugins/daterangepicker/daterangepicker.js"></script>
+      <!-- bootstrap color picker -->
+      <script src="/dist/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+      <script src="dist/js/demo.js"></script>
+      <!-- slick slider -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <!-- No. of members -->
+      <script>
+         const btn = document.getElementById('roomBtn');
+         const panel = document.getElementById('roomPanel');
+         const roomInfo = document.getElementById('roomInfo');
+         const guestInfo = document.getElementById('guestInfo');
+         
+         const roomSelect = document.getElementById('roomSelect');
+         const adultSelect = document.getElementById('adultSelect');
+         const childSelect = document.getElementById('childSelect');
+         
+         // Toggle dropdown
+         btn.addEventListener('click', (e) => {
+           e.stopPropagation();
+           panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+         });
+         
+         // Hide when clicking outside
+         document.addEventListener('click', () => {
+           panel.style.display = 'none';
+         });
+         
+         // Prevent overlay from closing when clicking inside
+         panel.addEventListener('click', (e) => {
+           e.stopPropagation();
+         });
+         
+         // Update button text on change
+         [roomSelect, adultSelect, childSelect].forEach(select => {
+           select.addEventListener('change', () => {
+             const rooms = roomSelect.value;
+             const adults = adultSelect.value;
+             const children = childSelect.value;
+         
+             roomInfo.textContent = `${rooms} Room${rooms > 1 ? 's' : ''},`;
+             guestInfo.textContent = `${adults} Adult${adults > 1 ? 's' : ''} ${children} Children`;
+           });
+         });
+      </script>
+      <!-- date picker -->
+      <script>
+         $(function () {
+           let checkinDate = null;
+           let checkoutDate = null;
+         
+           $('#checkin-date').datetimepicker({
+             format: 'L',
+             icons: {
+               date: 'fa fa-calendar'
+             }
+           });
+         
+           $('#checkout-date').datetimepicker({
+             format: 'L',
+             icons: {
+               date: 'fa fa-calendar'
+             },
+             useCurrent: false
+           });
+         
+           function updateNightCount() {
+             if (checkinDate && checkoutDate) {
+               const nights = moment(checkoutDate).diff(moment(checkinDate), 'days');
+               $('#night-count').text(nights > 0 ? nights : 0);
+             }
+           }
+         
+           $('#checkin-date').on('change.datetimepicker', function (e) {
+             checkinDate = e.date;
+             $('#checkin-label').text(e.date.format('ddd, DD MMM YYYY'));
+             $('#checkout-date').datetimepicker('minDate', e.date.add(1, 'days'));
+             updateNightCount();
+           });
+         
+           $('#checkout-date').on('change.datetimepicker', function (e) {
+             checkoutDate = e.date;
+             $('#checkout-label').text(e.date.format('ddd, DD MMM YYYY'));
+             updateNightCount();
+           });
+         });
+      </script>
+   </body>
+</html>

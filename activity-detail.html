@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Trip 69</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js"></script>
+      <!-- Leaflet CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+      <!-- Leaflet JS -->
+      <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+      <!-- Ion Slider -->
+      <link rel="stylesheet" href="/dist/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+      <!-- bootstrap slider -->
+      <link rel="stylesheet" href="/dist/plugins/bootstrap-slider/css/bootstrap-slider.min.css">
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="dist/css/fontawesome-free/css/all.min.css">
+      <!-- <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css"> -->
+      <!-- overlayScrollbars -->
+      <link rel="stylesheet" href="dist/css/overlayScrollbars/css/OverlayScrollbars.min.css">
+      <!-- <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css"> -->
+      <!-- Theme style -->
+      <link rel="stylesheet" href="dist/css/adminlte.min.css">
+      <!-- custom style -->
+      <link rel="stylesheet" href="/dist/css/customStyle.css">
+   </head>
+   <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed activity-result">
+      <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-dark">
+         <!-- Left navbar links -->
+         <div class="w-100">
+            <ul class="navbar-nav ml-auto w-75 d-flex align-items-center">
+               <!-- <li class="nav-item">
+                  <a href="index3.html" class="brand-link">
+                    <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                    <span class="brand-text font-weight-light">Trip 69</span>
+                  </a>    
+                  </li> -->
+               <li class="nav-item d-none d-sm-inline-block">
+                  <div class="logo">
+                     <a href="#"><b>Trip</b>69</a>
+                  </div>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="hotel.html" class="nav-link">Hotels</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="/transfer.html" class="nav-link">Transfer</a>
+               </li>
+               <li class="nav-item d-none d-sm-inline-block">
+                  <a href="/activity.html" class="nav-link">Activity</a>
+               </li>
+            </ul>
+         </div>
+         <!-- Right navbar links -->
+         <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <!-- Navbar Search -->
+            <li class="nav-item d-none d-sm-inline-block">
+               <a href="#" class="nav-link">₹50,000</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+               <a href="#" class="nav-link">Recharge</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+               <div class="user-panel d-flex mr-3">
+                  <div class="image">
+                     <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                  </div>
+                  <div class="info">
+                     <a href="#" class="d-block">Ram Sharma</a>
+                  </div>
+               </div>
+            </li>
+            <li class="nav-item d-none d-sm-flex align-items-center" title="logout">
+               <a href="/login.html" class="d-sm-flex align-items-center">
+                  <i class="fas fa-power-off"></i>
+                  <!-- Logout -->
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+               <i class="fas fa-expand-arrows-alt"></i>
+               </a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+               <i class="fas fa-th-large"></i>
+               </a>
+            </li>
+         </ul>
+      </nav>
+      <!-- /.navbar -->
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header p-0">
+         <div class="container-fluid p-0">
+            <div class="position-relative activy-detail-header" style="min-height: 550px; border-radius: 0 0 10px 10px; overflow: hidden;">
+               <!-- Background Image -->
+               <div class="w-100 h-100 position-absolute top-0 start-0" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80'); background-size: cover; background-position: center;"></div>
+               <!-- Dark Overlay -->
+               <div class="position-absolute w-100 h-100" style="background-color: rgba(0, 0, 0, 0.4);"></div>
+               <!-- Tabs -->
+               <div class="card card-primary card-tabs position-absolute w-75" style="top: 50%; left: 50%; transform: translate(-50%,-50%);">
+                  <div class="card-header p-0">
+                  </div>
+                  <div class="card-body">
+                     <div class="tab-content" id="custom-tabs-one-tabContent">
+                        <div class="tab-pane fade show active" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                           <form>
+                              <!-- <div class="section-title">Search Hotel</div> -->
+                              <div class="row">
+                                 <div class="col-md-5">
+                                    <label>Destination</label>
+                                    <div class="d-flex rounded" style="border: 1px solid grey;">
+                                       <div class="nav-item border-right">
+                                          <a class="nav-link  text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-marker-alt"></i>
+                                          </a>
+                                       </div>
+                                       <input type="text" class="form-control rounded-0 border-0" name="Country" list="destination" placeholder="Destination" required>
+                                       <datalist id="destination">
+                                          <option value="Dubai"></option>
+                                          <option value="Abu Dhabi"></option>
+                                          <option value="Faridabad"></option>
+                                          <option value="New Delhi"></option>
+                                       </datalist>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-4">
+                                    <label>All Styles</label>
+                                    <div class="d-flex rounded" style="border: 1px solid grey;">
+                                       <div class="nav-item border-right">
+                                          <a class="nav-link text-muted" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-list-ul"></i>
+                                          </a>
+                                       </div>
+                                       <input type="text" class="form-control rounded-0 border-0" name="All Styles" placeholder="All Styles" required>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3">
+                                    <div class="form-group">
+                                       <label>Pickup</label>
+                                       <div class="d-flex border rounded">
+                                          <span class="input-group-text rounded-0 input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker" required>
+                                          <i class="far fa-calendar-alt"></i>
+                                          </span>
+                                          <div class="input-group date border-0" id="reservationdatetime" data-target-input="nearest">
+                                             <input type="text" class="form-control datetimepicker-input border-0" data-target="#reservationdatetime">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row d-flex align-items-center mt-3">
+                                 <div class="col-md-4">
+                                    <!-- Add inside any card-body or section in your page -->
+                                    <div class="form-group position-relative">
+                                       <label>Passengers</label>
+                                       <button class="btn w-100 p-2 text-muted fw-bold text-start d-flex align-items-center justify-content-between border" id="passengerBtn" type="button">
+                                          <div>
+                                             <i class="fas fa-user-friends mr-2"></i>
+                                             <span>
+                                             <strong>Passengers:</strong> <span id="total-passenger">1</span>,
+                                             <strong>Adults:</strong> <span id="adult-count">1</span>, 
+                                             <strong>Children:</strong> <span id="child-count">0</span> 
+                                             </span>
+                                          </div>
+                                          <i class="fas fa-chevron-down"></i>
+                                       </button>
+                                       <div class="card border-muted shadow dropdown-menu p-3 mt-1 w-100" id="passengerDropdown" style="display: none; position: absolute; z-index: 1050;">
+                                          <!-- Adults -->
+                                          <div class="form-group row align-items-center">
+                                             <label class="col-sm-3 col-form-label">Adults</label>
+                                             <div class="col-sm-9 input-group">
+                                                <button type="button" class="btn btn-outline-secondary" onclick="updateCount('adults', -1)">
+                                                <i class="fas fa-minus-circle"></i>
+                                                </button>
+                                                <input type="number" id="adults" class="form-control text-center mx-2" value="1" readonly>
+                                                <button type="button" class="btn btn-outline-secondary" onclick="updateCount('adults', 1)">
+                                                <i class="fas fa-plus-circle"></i>
+                                                </button>
+                                             </div>
+                                          </div>
+                                          <!-- Children -->
+                                          <div class="form-group row align-items-center mt-3">
+                                             <label class="col-sm-3 col-form-label">Children</label>
+                                             <div class="col-sm-9 input-group">
+                                                <button type="button" class="btn btn-outline-secondary" onclick="updateCount('children', -1)">
+                                                <i class="fas fa-minus-circle"></i>
+                                                </button>
+                                                <input type="number" id="children" class="form-control text-center mx-2" value="0" readonly>
+                                                <button type="button" class="btn btn-outline-secondary" onclick="updateCount('children', 1)">
+                                                <i class="fas fa-plus-circle"></i>
+                                                </button>
+                                             </div>
+                                          </div>
+                                          <!-- Child Age Inputs -->
+                                          <div id="child-age-inputs" class="mt-3"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-2 mt-3 ">
+                                    <a href="/activity-detail.html" type="submit" class="btn btn-primary btn-block">Search</a>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+      <!-- Main content -->
+      <section class="content mt-3">
+         <div class="container-fluid">
+            <div class="wrapper d-flex row">
+               <!-- Main Sidebar Container -->
+               <aside class="main-sidebar sidebar-dark-primary elevation-4 filter-sidebar" style="position: relative;">
+                  <!-- Sidebar -->
+                  <div class="sidebar">
+                     <!-- Filter Card -->
+                     <div class="card card-primary">
+                        <div class="card-body">
+                           <!-- Price Range -->
+                           <div class="form-group">
+                              <label for=""> Price Range </label>
+                              <div class="slider-blue">
+                                 <input type="text" 
+                                    class="slider form-control" 
+                                    data-slider-min="100" 
+                                    data-slider-max="500000" 
+                                    data-slider-step="100" 
+                                    data-slider-value="[100, 500000]" 
+                                    data-slider-orientation="horizontal" 
+                                    data-slider-selection="before" 
+                                    data-slider-tooltip="show">
+                              </div>
+                           </div>
+                           <!-- vehicle type -->
+                           <div class="form-group">
+                              <label><i class="fas fa-car-side mr-2"></i>   Activity Style  </label>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="chain1" value="Accor-AllSeasons">
+                                 <label class="form-check-label" for="vehicle-type1">
+                                 Activity (34) 
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="vehicle-type2" value="Accor-Ibis">
+                                 <label class="form-check-label" for="vehicle-type2">
+                                 City Tour (5) 
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="vehicle-type3" value="Accor-Mercure">
+                                 <label class="form-check-label" for="vehicle-type3">
+                                 Cruise (11)  
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="vehicle-type4" value="Accor-Pullman">
+                                 <label class="form-check-label" for="vehicle-type4">
+                                 Safari Tour (2)
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="vehicle-type5" value="Amari">
+                                 <label class="form-check-label" for="vehicle-type5">
+                                 Other (14)
+                                 </label>
+                              </div>
+                              <!-- Show More Button (Optional) -->
+                              <div class="pt-2">
+                                 <button class="btn btn-sm btn-outline-primary">
+                                 <i class="fas fa-chevron-down mr-1"></i> More Chains
+                                 </button>
+                              </div>
+                           </div>
+                           <!-- service type -->
+                           <div class="form-group">
+                              <label class="font-weight-bold"><i class="fas fa-tools mr-2"></i>
+                              Service Types  </label>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="service-type1" value="Beach Hotel">
+                                 <label class="form-check-label" for="service-type1">SIC (0) </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="service-type1" value="Beach Hotel">
+                                 <label class="form-check-label" for="service-type1">Private (252)  </label>
+                              </div>
+                           </div>
+                           <!-- hotel location -->
+                           <!-- Location -->
+                           <div class="form-group">
+                              <label class="font-weight-bold"> <i class="fas fa-globe mr-2"></i>
+                              Guide Languages </label>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="guide-language1" value="Bang Saray">
+                                 <label class="form-check-label" for="guide-language1">Other (167) </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- /.sidebar -->
+               </aside>
+               <div class="col-12 col-lg-8 col-xl-9 result-details-layout">
+                  <!-- Content Wrapper. Contains page content -->
+                  <div class="content-wrapper m-0">
+                     <section class="content-header pt-0">
+                        <div class="container-fluid">
+                           <div class="container-fluid p-0">
+                              <nav class="navbar navbar-expand navbar-dark mb-3 p-0 py-1">
+                                 <div class="container">
+                                    <ul class="navbar-nav">
+                                       <li class="nav-item">
+                                          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                                       </li>
+                                    </ul>
+                                    <div class="pr-3">
+                                       <h5>Places Found In Dubai <span class="badge badge-primary">54</span></h5>
+                                    </div>
+                                 </div>
+                              </nav>
+                           </div>
+                        </div>
+                     </section>
+                     <section class="content">
+                        <div class="container-fluid">
+                           <!-- Quad Biking Card -->
+                           <div class="card mb-3">
+                              <div class="row no-gutters">
+                                 <div class="col-md-3">
+                                    <div class="d-flex w-100 rounded-left position-relative overflow-hidden" style="height: 200px;">
+                                       <!-- Image Button with Background Image -->
+                                       <button class="btn p-0 m-0 border-0 w-100 h-100 overflow-hidden rounded-0" style="background-color: #d7d7d7; background-image: url('https://manage.tpb2b.com/SightSeeing/images/350/CL229/quad-biking-in-dubai-dm2311000003-general2.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+                                       <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" class="img-fluid" alt="Hotel Image">
+                                       </button>
+                                    
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Quad Biking in Dubai without Transfers</h5>
+                                       <p class="card-text"><small class="text-muted">Open - Close: 00:00 To 00:00</small></p>
+                                       <p class="card-text">Enjoy the outstanding view of the irregular desert of Dubai as your activity your quad bike through the steep hills, low plateaus, and vast-open canyons.</p>
+                                       <button class="btn btn-primary" data-toggle="collapse" data-target="#activityRate0">Activity Detail</button>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-3 d-flex align-items-center">
+                                    <div class="card-body text-center">
+                                       <a href="/activity-cart.html" class="btn btn-primary btn-block mb-3">Book Now</a>
+                                       <h4 class="text-primary">AED 120.00</h4>
+                                       <span class="badge badge-secondary">On Request</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- Collapsible Content -->
+                              <div class="collapse" id="activityRate0">
+                                 <div class="card-body border-top">
+                                    <h6 class="text-primary">Single Quad Bike without Transfers</h6>
+                                    <p><strong>Inclusions:</strong> Quad Biking in Dubai without Transfers</p>
+                                    <p>Includes:<br>-20 minutes use of Single Quad Bike with Safety briefing and instruction<br>-1 Quad Bike for 1 Pax</p>
+                                    <div class="nav nav-pills mb-3">
+                                       <a class="nav-item nav-link active" href="#">00:00 (Private)</a>
+                                    </div>
+                                    <div class="tab-content">
+                                       <div class="tab-pane fade show active">
+                                          <div class="row border-top pt-3">
+                                             <div class="col-md-9">
+                                                <div class="row">
+                                                   <div class="col-md-4">
+                                                      <p><strong>Tour code:</strong> QB01</p>
+                                                   </div>
+                                                   <div class="col-md-4">
+                                                      <p><strong>Start From:</strong> Dubai</p>
+                                                   </div>
+                                                   <div class="col-md-4">
+                                                      <p><strong>Style:</strong> Safari Tour</p>
+                                                   </div>
+                                                </div>
+                                                <div class="row">
+                                                   <div class="col-md-4">
+                                                      <p><strong>Service Type:</strong> Private</p>
+                                                   </div>
+                                                   <div class="col-md-4">
+                                                      <p><strong>Start Time:</strong> 00:00</p>
+                                                   </div>
+                                                   <div class="col-md-4">
+                                                      <p><strong>Min Pax:</strong> 1</p>
+                                                   </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                   <div class="col-md-4">
+                                                      <p><strong>Tour Duration:</strong> 3 hrs</p>
+                                                   </div>
+                                                   <div class="col-md-4">
+                                                      <p><strong>Time Of Day:</strong> All Day</p>
+                                                   </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                   <div class="col-md-8">
+                                                      <p><strong>Pick-up Tour:</strong> No pick up provided</p>
+                                                      <p><strong>Guide Language:</strong> NONE</p>
+                                                   </div>
+                                                   <div class="col-md-4">
+                                                      <button class="btn btn-link text-danger p-0">
+                                                      <i class="fas fa-exclamation-circle"></i> Cancellation policy
+                                                      </button>
+                                                   </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                   <div class="col-auto">
+                                                      <i class="fas fa-male"></i> 1 x 120.00 = AED 120.00
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-3">
+                                                <div class="p-3 text-center">
+                                                   <button class="btn btn-primary btn-block mb-3">Book Now</button>
+                                                   <h4 class="text-primary">AED 120.00</h4>
+                                                   <span class="badge badge-secondary">On Request</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                         
+                           <!-- Add more cards for other activities following the same pattern -->
+                           <!-- Pagination -->
+                           <nav aria-label="Page navigation">
+                              <ul class="pagination justify-content-center">
+                                 <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                 </li>
+                                 <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                 <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                 <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                 <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                 <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                 <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                 <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                 </li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </section>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- ./wrapper -->
+      <!-- REQUIRED SCRIPTS -->
+      <!-- jQuery -->
+      <!-- jQuery -->
+      <!-- jQuery -->
+      <script src="/dist/plugins/jquery/jquery.min.js"></script>
+      <!-- Bootstrap 4 -->
+      <script src="/dist/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- Select2 -->
+      <script src="/dist/plugins/select2/js/select2.full.min.js"></script>
+      <!-- Bootstrap4 Duallistbox -->
+      <script src="/dist/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+      <!-- InputMask -->
+      <script src="/dist/plugins/moment/moment.min.js"></script>
+      <script src="/dist/plugins/inputmask/jquery.inputmask.min.js"></script>
+      <!-- date-range-picker -->
+      <script src="/dist/plugins/daterangepicker/daterangepicker.js"></script>
+      <!-- Tempusdominus Bootstrap 4 -->
+      <script src="/dist/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="/dist/js/adminlte.min.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="/dist/js/demo.js"></script>
+      <!-- Bootstrap slider -->
+      <script src="/dist/plugins/bootstrap-slider/bootstrap-slider.min.js"></script>
+      <script>
+         $(function () {
+           /* BOOTSTRAP SLIDER */
+           $('.slider').bootstrapSlider()
+         
+           /* ION SLIDER */
+           $('#range_1').ionRangeSlider({
+             min     : 0,
+             max     : 5000,
+             from    : 1000,
+             to      : 4000,
+             type    : 'double',
+             step    : 1,
+             prefix  : '$',
+             prettify: false,
+             hasGrid : true
+           })
+           $('#range_2').ionRangeSlider()
+         
+           $('#range_5').ionRangeSlider({
+             min     : 0,
+             max     : 10,
+             type    : 'single',
+             step    : 0.1,
+             postfix : ' mm',
+             prettify: false,
+             hasGrid : true
+           })
+           $('#range_6').ionRangeSlider({
+             min     : -50,
+             max     : 50,
+             from    : 0,
+             type    : 'single',
+             step    : 1,
+             postfix : '°',
+             prettify: false,
+             hasGrid : true
+           })
+         
+           $('#range_4').ionRangeSlider({
+             type      : 'single',
+             step      : 100,
+             postfix   : ' light years',
+             from      : 55000,
+             hideMinMax: true,
+             hideFromTo: false
+           })
+           $('#range_3').ionRangeSlider({
+             type    : 'double',
+             postfix : ' miles',
+             step    : 10000,
+             from    : 25000000,
+             to      : 35000000,
+             onChange: function (obj) {
+               var t = ''
+               for (var prop in obj) {
+                 t += prop + ': ' + obj[prop] + '\r\n'
+               }
+               $('#result').html(t)
+             },
+             onLoad  : function (obj) {
+               //
+             }
+           })
+         })
+      </script>
+      <script>
+         $(function () {
+           //Initialize Select2 Elements
+           $('.select2').select2()
+         
+           //Initialize Select2 Elements
+           $('.select2bs4').select2({
+             theme: 'bootstrap4'
+           })
+         
+           //Datemask dd/mm/yyyy
+           $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+           //Datemask2 mm/dd/yyyy
+           $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+           //Money Euro
+           $('[data-mask]').inputmask()
+         
+           //Date picker
+           $('#reservationdate').datetimepicker({
+               format: 'L'
+           });
+         
+           //Date and time picker
+           $('#reservationdatetime').datetimepicker({ icons: { time: 'far fa-clock' } });
+         
+           //Date range picker
+           $('#reservation').daterangepicker()
+           //Date range picker with time picker
+           $('#reservationtime').daterangepicker({
+             timePicker: true,
+             timePickerIncrement: 30,
+             locale: {
+               format: 'MM/DD/YYYY hh:mm A'
+             }
+           })
+           //Date range as a button
+           $('#daterange-btn').daterangepicker(
+             {
+               ranges   : {
+                 'Today'       : [moment(), moment()],
+                 'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                 'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+                 'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+                 'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+                 'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+               },
+               startDate: moment().subtract(29, 'days'),
+               endDate  : moment()
+             },
+             function (start, end) {
+               $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+             }
+           )
+         
+           //Timepicker
+           $('#timepicker').datetimepicker({
+             format: 'LT'
+           })
+         
+           //Bootstrap Duallistbox
+           $('.duallistbox').bootstrapDualListbox()
+         
+           //Colorpicker
+           $('.my-colorpicker1').colorpicker()
+           //color picker with addon
+           $('.my-colorpicker2').colorpicker()
+         
+           $('.my-colorpicker2').on('colorpickerChange', function(event) {
+             $('.my-colorpicker2 .fa-square').css('color', event.color.toString());
+           })
+         
+           $("input[data-bootstrap-switch]").each(function(){
+             $(this).bootstrapSwitch('state', $(this).prop('checked'));
+           })
+         
+         })
+         // BS-Stepper Init
+         document.addEventListener('DOMContentLoaded', function () {
+           window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+         })
+         
+         // DropzoneJS Demo Code Start
+         Dropzone.autoDiscover = false
+         
+         // Get the template HTML and remove it from the doumenthe template HTML and remove it from the doument
+         var previewNode = document.querySelector("#template")
+         previewNode.id = ""
+         var previewTemplate = previewNode.parentNode.innerHTML
+         previewNode.parentNode.removeChild(previewNode)
+         
+         var myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+           url: "/target-url", // Set the url
+           thumbnailWidth: 80,
+           thumbnailHeight: 80,
+           parallelUploads: 20,
+           previewTemplate: previewTemplate,
+           autoQueue: false, // Make sure the files aren't queued until manually added
+           previewsContainer: "#previews", // Define the container to display the previews
+           clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+         })
+         
+         myDropzone.on("addedfile", function(file) {
+           // Hookup the start button
+           file.previewElement.querySelector(".start").onclick = function() { myDropzone.enqueueFile(file) }
+         })
+         
+         // Update the total progress bar
+         myDropzone.on("totaluploadprogress", function(progress) {
+           document.querySelector("#total-progress .progress-bar").style.width = progress + "%"
+         })
+         
+         myDropzone.on("sending", function(file) {
+           // Show the total progress bar when upload starts
+           document.querySelector("#total-progress").style.opacity = "1"
+           // And disable the start button
+           file.previewElement.querySelector(".start").setAttribute("disabled", "disabled")
+         })
+         
+         // Hide the total progress bar when nothing's uploading anymore
+         myDropzone.on("queuecomplete", function(progress) {
+           document.querySelector("#total-progress").style.opacity = "0"
+         })
+         
+         // Setup the buttons for all transfers
+         // The "add files" button doesn't need to be setup because the config
+         // `clickable` has already been specified.
+         document.querySelector("#actions .start").onclick = function() {
+           myDropzone.enqueueFiles(myDropzone.getFilesWithStatus(Dropzone.ADDED))
+         }
+         document.querySelector("#actions .cancel").onclick = function() {
+           myDropzone.removeAllFiles(true)
+         }
+         // DropzoneJS Demo Code End
+         
+      </script>
+      <!-- for map -->
+      <script>
+         var map = L.map('map').setView([28.6139, 77.2090], 13);
+         var marker;
+         
+         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           attribution: '&copy; OpenStreetMap contributors'
+         }).addTo(map);
+         
+         function searchLocation(query) {
+           // Nominatim API for location search
+           fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${query}`)
+             .then(response => response.json())
+             .then(data => {
+               if (data.length > 0) {
+                 var lat = data[0].lat;
+                 var lon = data[0].lon;
+         
+                 map.setView([lat, lon], 13);
+         
+                 if (marker) {
+                   marker.setLatLng([lat, lon]);
+                 } else {
+                   marker = L.marker([lat, lon]).addTo(map);
+                 }
+         
+                 marker.bindPopup(`<b>${query}</b>`).openPopup();
+               } else {
+                 alert("Location not found!");
+               }
+             });
+         }
+         
+         document.getElementById('searchBtn').addEventListener('click', function () {
+           var query = document.getElementById('searchInput').value;
+           if (query.trim() !== '') {
+             searchLocation(query);
+           }
+         });
+      </script>
+      <!-- date picker -->
+      <script>
+         $(function () {
+           let checkinDate = null;
+           let checkoutDate = null;
+         
+           $('#checkin-date').datetimepicker({
+             format: 'L',
+             icons: {
+               date: 'fa fa-calendar'
+             }
+           });
+         
+           $('#checkout-date').datetimepicker({
+             format: 'L',
+             icons: {
+               date: 'fa fa-calendar'
+             },
+             useCurrent: false
+           });
+         
+           function updateNightCount() {
+             if (checkinDate && checkoutDate) {
+               const nights = moment(checkoutDate).diff(moment(checkinDate), 'days');
+               $('#night-count').text(nights > 0 ? nights : 0);
+             }
+           }
+         
+           $('#checkin-date').on('change.datetimepicker', function (e) {
+             checkinDate = e.date;
+             $('#checkin-label').text(e.date.format('ddd, DD MMM YYYY'));
+             $('#checkout-date').datetimepicker('minDate', e.date.add(1, 'days'));
+             updateNightCount();
+           });
+         
+           $('#checkout-date').on('change.datetimepicker', function (e) {
+             checkoutDate = e.date;
+             $('#checkout-label').text(e.date.format('ddd, DD MMM YYYY'));
+             updateNightCount();
+           });
+         });
+      </script>
+      <script>
+         const btn = document.getElementById('roomBtn');
+         const panel = document.getElementById('roomPanel');
+         const roomInfo = document.getElementById('roomInfo');
+         const guestInfo = document.getElementById('guestInfo');
+         
+         const roomSelect = document.getElementById('roomSelect');
+         const adultSelect = document.getElementById('adultSelect');
+         const childSelect = document.getElementById('childSelect');
+         
+         // Toggle dropdown
+         btn.addEventListener('click', (e) => {
+           e.stopPropagation();
+           panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+         });
+         
+         // Hide when clicking outside
+         document.addEventListener('click', () => {
+           panel.style.display = 'none';
+         });
+         
+         // Prevent overlay from closing when clicking inside
+         panel.addEventListener('click', (e) => {
+           e.stopPropagation();
+         });
+         
+         // Update button text on change
+         [roomSelect, adultSelect, childSelect].forEach(select => {
+           select.addEventListener('change', () => {
+             const rooms = roomSelect.value;
+             const adults = adultSelect.value;
+             const children = childSelect.value;
+         
+             roomInfo.textContent = `${rooms} Room${rooms > 1 ? 's' : ''},`;
+             guestInfo.textContent = `${adults} Adult${adults > 1 ? 's' : ''} ${children} Children`;
+           });
+         });
+      </script> 
+      <!-- transfer Passengers  js -->
+      <script>
+         const passengerBtn = document.getElementById("passengerBtn");
+         const passengerDropdown = document.getElementById("passengerDropdown");
+         
+         passengerBtn.addEventListener("click", () => {
+           passengerDropdown.style.display = passengerDropdown.style.display === "none" ? "block" : "none";
+         });
+         
+         document.addEventListener("click", function (event) {
+           if (!passengerBtn.contains(event.target) && !passengerDropdown.contains(event.target)) {
+             passengerDropdown.style.display = "none";
+           }
+         });
+         
+         function updateCount(type, change) {
+           const input = document.getElementById(type);
+           let value = parseInt(input.value) + change;
+           if (value < 0) value = 0;
+           input.value = value;
+         
+           // Update counts
+           const adults = parseInt(document.getElementById("adults").value);
+           const children = parseInt(document.getElementById("children").value);
+           const total = adults + children;
+         
+           document.getElementById("adult-count").innerText = adults;
+           document.getElementById("child-count").innerText = children;
+           document.getElementById("total-passenger").innerText = total;
+         
+           if (type === 'children') updateChildAgeFields(children);
+         }
+         
+         function updateChildAgeFields(count) {
+           const container = document.getElementById("child-age-inputs");
+           container.innerHTML = '';
+           for (let i = 1; i <= count; i++) {
+             container.innerHTML += `
+               <div class="form-group row align-items-center">
+                 <label class="col-sm-4 col-form-label">Child ${i} Age</label>
+                 <div class="col-sm-8">
+                   <select class="form-control">
+                     ${Array.from({ length: 12 }, (_, i) => `<option>${i}</option>`).join('')}
+                   </select>
+                 </div>
+               </div>
+             `;
+           }
+         }
+      </script>
+   </body>
+</html>
